@@ -11,7 +11,7 @@ Usage and Setup:
 -Go nuts with exploring
 
 Suggestion:
-Familiarize yourself with igraph library before using this libclustER.
+Familiarize yourself with igraph library before using libclustER.
 
 Note:
 All clustering functions are meant to take in an igraph object as input.
