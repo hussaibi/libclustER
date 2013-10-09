@@ -16,7 +16,8 @@ Usage and Setup:
 
 source("libcluster.R");
 
-(5) Go nuts with exploring ...or see the wiki for more specific information about the library
+(5) Go nuts with exploring ...or see the wiki (https://github.com/hussaibi/libclustER/wiki) 
+for more specific information about the library
 
 Suggestion:
 -----------
