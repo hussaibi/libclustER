@@ -36,7 +36,7 @@ accuracy measures.}
 \scriptsize
 \begin{tabular}{|ccc|} \hline \\
 
-<< fig=TRUE, echo=FALSE, label=partition, include=FALSE, width=4, height=4,eps=TRUE >>=
+<<fig=TRUE, echo=FALSE, label=partition, include=FALSE, width=4, height=4,eps=TRUE >>=
 setwd("../../trunk/results/results-parser");
 source("results-grapher.r");
 setwd("../../../documents/paper/");
@@ -191,7 +191,7 @@ print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" cc-pivot "))
 \includegraphics[width=0.25\linewidth]{results-ccpiv}
  &
 << fig=TRUE, echo=FALSE, label=ccl, include=FALSE, width=3, height=3,eps=TRUE>>=
-print(plot.old.algo.all.normalized.accuracy(data=old.output.error, algos="ccl"))
+#print(plot.old.algo.all.normalized.accuracy(data=old.output.error, algos="ccl"))
 @
 << fig=TRUE, echo=FALSE, label=ap, include=FALSE, width=3, height=3,eps=TRUE>>=
 print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" affinity-propagation-uniform(=0) "))

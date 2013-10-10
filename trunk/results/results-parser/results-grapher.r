@@ -1,16 +1,16 @@
 library(plotrix)
 #setwd("~/dbgroup/libcluster.alt/trunk/results/results-parser");
-old.output.single <- read.csv("../old/uniform-single-error.csv", header=TRUE);
-old.output.error <- read.csv("../old/uniform-error.csv", header=TRUE);
+#old.output.single <- read.csv("../old/uniform-single-error.csv", header=TRUE);
+#old.output.error <- read.csv("../old/uniform-error.csv", header=TRUE);
 output <- read.csv("output.csv", header=FALSE);
 graph.output <- read.csv("graph.output.csv", header=FALSE);
 graph.scale.output <- read.csv("graph.scale.output.csv", header=FALSE);
 
 # Reseting names for easier reference
-names(old.output.single) <- c('Algo', 'table', 'class', 'theta', 'PCPr', 'CPr',
-                              'Pr', 'Re', 'F1', 'ClusterNum');
-names(old.output.error) <- c('Algo', 'table', 'class', 'theta', 'PCPr', 'CPr',
-                             'Pr', 'Re', 'F1', 'ClusterNum');
+#names(old.output.single) <- c('Algo', 'table', 'class', 'theta', 'PCPr', 'CPr',
+#                              'Pr', 'Re', 'F1', 'ClusterNum');
+#names(old.output.error) <- c('Algo', 'table', 'class', 'theta', 'PCPr', 'CPr',
+#                             'Pr', 'Re', 'F1', 'ClusterNum');
 #re-align old data
 align.old.by.file <- function(old.output.error) {
   old.output.error$file = "";
@@ -94,8 +94,8 @@ align.old.by.algo <- function(old.output.error) {
 
   return(old.output.error)
 }
-old.output.error = align.old.by.algo(old.output.error=old.output.error);
-old.output.error = align.old.by.file(old.output.error=old.output.error);
+#old.output.error = align.old.by.algo(old.output.error=old.output.error);
+#old.output.error = align.old.by.file(old.output.error=old.output.error);
 #
 names(output) <- c("ClusterNum", "PCPr", "K", "VI", "CPr", "theta", "Re", 'elapsed',
                    'algo', 'file', "Pr");
@@ -125,7 +125,6 @@ merge.old.and.new.data <- function(old.data, new.data){
   return(new.data);
 }
 #output = merge.old.and.new.data(old.data=old.output.error, new.data=output);
-#
 names(graph.output) <- c("LocalAverageGraphDegreeDensity", "LocalAverageTransitivity"
   , "GraphEdgeDensity", "theta", "GraphStrengthDensity", "StdMarkov"
   , "LocalAverageGraphStrengthDensity", "file", "AvgEVCent"
