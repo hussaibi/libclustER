@@ -1,0 +1,1165 @@
+%\setkeys{Gin}{width=0.6\textwidth}
+%restructured some headings
+\section{Results} \label{sec:results}
+We first report the results of our experiments and observations for each individual algorithm. We use the Partitioning algorithm, which returns the connected components in the similarity graph as clusters, as the baseline for our evaluations. We then present a comparative performance study among the algorithms, and finally, we report the running times for each algorithm.
+
+Most of the accuracy results reported in this paper are average results over the medium error class of datasets in Table \ref{tbl:datasets} since we believe that these results are representative of algorithm behaviour when using datasets with different characteristics.  We show the results from other datasets whenever the trends deviate from the medium class datasets.  Our extensive experimental results over all the 29 datasets in Table \ref{tbl:datasets} are publicly available\footnote{http://dblab.cs.toronto.edu/project/stringer/clustering/}.
+\addedit{Bilal}{explicitly state what VI and K mean}
+Lastly, in the following sections we refer to the k-measure as 'K' and the normalized
+variation of information measure as 'VI'.
+
+\subsection{Individual Results}
+In this section we present the accuracy results for our experiments.
+\subsubsection{Single-pass Algorithms}
+Figure \ref{fig:namsp} shows the mean accuracy values for the single-pass algorithms over the Medium Error Group datasets (see Table \ref{tbl:datasets}), with the accuracy measure ranges over the Low, Medium, and High Error Group datasets. The ranges were calculated as the difference between the maximum and minimum attainable accuracy for a specific $\theta$ threshold.
+\eat{and two thresholds that result in the best average F1 measure and the best average PCPr values in these algorithms. Similar trends were observed for the other thresholds and datasets.}
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c|c||c|c||c|c|} \hline
+% & \multicolumn{2}{|c||}{ Partitioning } &  \multicolumn{2}{|c||}{CENTER} & \multicolumn{2}{|c|}{ MC } \\ \cline{2-7}
+%     & Best & Best & Best & Best & Best & Best  \\
+%     & PCPr & F$_1$ & PCPr & F$_1$ & PCPr & F$_1$ \\ \hline
+%PCPr & 0.554 & 0.469 & 0.638 & 0.298 & 0.695 & 0.437\\ \hline
+%CPr & 0.946 & 0.805 & 0.818 & 0.692 & 0.940 & 0.795\\ \hline
+%Pr & 0.503 & 0.934 & 0.799 & 0.971 & 0.658 & 0.958\\ \hline
+%Re & 0.906 & 0.891 & 0.860 & 0.805 & 0.950 & 0.885\\ \hline
+%F1 & 0.622 & 0.910 & 0.825 & 0.877 & 0.776 & 0.918\\ \hline
+%Cluster\# & 354 & 994 & 697 & 1305 & 459 & 1030\\ \hline
+%\end{tabular}
+%\end{center}
+
+\addedit{Oktie Suggestion}{Reshaped data by categorizing algorithms, instead of
+accuracy measures.}
+\addedit{Bilal->Oktie}{Addressed. Taking up more space.}
+\begin{figure*}
+\centering
+%\small
+\scriptsize
+\begin{tabular}{|ccc|} \hline \\
+
+<< fig=TRUE, echo=FALSE, label=partition, include=FALSE, width=4, height=4,eps=TRUE >>=
+setwd("../../trunk/results/results-parser");
+source("results-grapher.r");
+setwd("../../../documents/paper/");
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" partition "))
+@
+
+<< fig=TRUE, echo=FALSE, label=sppr, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(plot.algo.all.normalized.centrality(data=error.medium, measure="Pr",
+                                          algos=c(" partition ", " center ",
+                                                  " merge-center ")))
+
+@
+
+\includegraphics[width=0.25\linewidth]{results-sppr}
+ &
+<< fig=TRUE, echo=FALSE, label=mergecenter, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" merge-center "))
+@
+
+<< fig=TRUE, echo=FALSE, label=spre, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(plot.algo.all.normalized.centrality(data=error.medium, measure="Re",
+                                          algos=c(" partition ", " center ",
+                                                  " merge-center ")))
+@
+
+\includegraphics[width=0.25\linewidth]{results-spre}
+ &
+<< fig=TRUE, echo=FALSE, label=center, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" center "))
+@
+
+<< fig=TRUE, echo=FALSE, label=spf1, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(plot.algo.all.normalized.centrality(data=error.medium, measure="F1",
+                                          algos=c(" partition ", " center ",
+                                                  " merge-center ")))
+
+@
+
+\includegraphics[width=0.25\linewidth]{results-spf1}
+\\
+
+<< fig=TRUE, echo=FALSE, label=sppcpr, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(plot.algo.all.normalized.centrality(data=error.medium, measure="PCPr",
+                                          algos=c(" partition ", " center ",
+                                                  " merge-center ")))
+
+@
+
+\includegraphics[width=0.25\linewidth]{results-sppcpr} &
+ 
+<< fig=TRUE, echo=FALSE, label=spvi, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(plot.algo.all.normalized.centrality(data=error.medium, measure="VI",
+                                          algos=c(" partition ", " center ",
+                                                  " merge-center ")))
+
+@
+
+\includegraphics[width=0.25\linewidth]{results-spvi} &
+ 
+<< fig=TRUE, echo=FALSE, label=spk, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(plot.algo.all.normalized.centrality(data=error.medium, measure="K",
+                                          algos=c(" partition ", " center ",
+                                                  " merge-center ")))
+
+@
+
+\includegraphics[width=0.25\linewidth]{results-spk} 
+\\ \hline
+\end{tabular}
+\caption{Mean accuracy measures of single-pass algorithms for Medium Error Group.}
+\label{fig:namsp}
+\end{figure*}
+
+%Bilal: added K and VI. For medium error. Avoided mixing tables.
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c||c||c|} \hline
+% & \multicolumn{1}{|c||}{ Partitioning } &  \multicolumn{1}{|c||}{CENTER} & \multicolumn{1}{|c|}{ MC } \\ \cline{2-4}
+%     & Best & Best & Best  \\
+%     & K and VI & K and VI & K and VI \\ \hline
+%PCPr & 0.555 & 0.796  & 0.521 \\ \hline
+%CPr & 0.974 & 0.967 & 0.977 \\ \hline
+%Pr & 0.989 & 0.988 & 0.991 \\ \hline
+%Re & 0.472 & 0.725 & 0.440 \\ \hline
+%F1 & 0.623 & 0.830 & 0.597 \\ \hline
+%VI & 0.071 & 0.035 & 0.072  \\ \hline
+%K & 0.877 & 0.933 & 0.874 \\ \hline
+%Cluster\# & 990 & 619 & 1035 \\ \hline
+%\end{tabular}
+%\end{center}
+
+%Oktie(CR): tried to improve the description of the results
+The results, in Figure \ref{fig:namsp}, show CENTER performs better than the Partitioning algorithm for small $\theta$. Merge Center's (MC) accuracy is inbetween the two other algorithms. This occurs because Partitioning creates the largests clusters. For higher $\theta$ values, Partitioning obtains higher recall and lower precision.  CENTER puts many similar records into different clusters resulting in lower recall, but higher precision. MC has lower precision than CENTER but higher than Partitioning.
+
+MC's best recall is almost as high as that of Partitioning. MC performs better for midrange $\theta$ values. However, CENTER generally has a smaller accuracy range. Thus it is the most reliable among the three with respect to the amount of error present in the dataset. However, for mid-range $\theta$ values, those that do not produce clusterings close to trivial cases (too dense or too sparse similarity-join), MC generally outperforms CENTER and Partitioning. Particular attention should be given to PCPr and CPr. For CENTER, PCPr declines more than CPr for larger $\theta$ values,  showing poor quality clusterings. Looking at th k-measure verifies the cause to be due to increased fragmentation. If the k-measure had not changed, than the cause would have been the displacement of records.
+
+Note that the number of clusters in the ground truth is 500.
+\eat{The last row in the table shows the number of clusters generated by each algorithm.} 
+These results show that precision, recall and F$_1$ measures alone cannot determine the best algorithm since they do not take into
+%Bilal:inserted justification of CPr and PCPr earlier and ?remove this justification?.
+account the number of clusters generated, this justifies using the CPr and PCPr measures. Furthermore, we can observe the high degree of sensitivity of all these algorithms to the threshold value used in the similarity join.
+\eat{, although MC is less sensitive to the $\theta$ value among the single-pass algorithms.}
+In general, the main takeaway from these results would be that MC's accuracy is not consistent over error groups, while CENTER is not consistent over $\theta$ thresholds. Partitioning achieves the best recall for larger $\theta$ values due to forming fewer and larger clusters (see Figure \ref{fig:calgs}).
+%Oktie(CR): tried to improve the description of the results, according to reviewer #1
+%Bilal: added footnote
+\subsubsection{Star Algorithm} Figure \ref{fig:calgsres} includes the results for the Star algorithm (STAR) \footnote{In the default instance, the degree centrality measure is being used.}. It shows that the algorithm has relatively poor performance in terms of accuracy when a lower threshold value is used. With a mid threshold value, STAR begins to peak in performance. This can be largely attributed to using a first-order neighbourhood, instead of a graph component search for forming clusters. Initially the clusters are capable of providing better recall, like Partition, but quickly transition to the same behaviour as CENTER. Interestingly, the non-overlapping cluster variants of STAR do not have one optimal threshold for all accuracy measures, resulting in slightly more complex behaviour as larger $\theta$ thresholds are used. Note that the non-overlapping (partition) variant of STAR achieved slightly higher accuracy for all measures, except Recall.
+For higher thresholds, the quality of the clustering considerably decreases. Partitioning, MC, CENTER and STAR exibhit similar behaviour for hiher thresholds due to a lack of join information. Partitioning performs slightly better in this case due to using graph components. STAR is able to perform slight better than CENTER due to using overlapping clusters.
+STAR's decrease in accuracy is due to the centers in its algorithm (see Algorithms \ref{cutbasedalgo} and \ref{staralgo}) being traversed based on degree. Using higher threshold values decreases the degree of all nodes and makes the choice of a proper cluster center harder, resulting in clusterings of lower quality. Even with an ideal threshold, STAR's accuracy is less than the accuracy of the single-pass algorithms. However, STAR does obtain high recall accuracy initially for low thresholds. However, it is still lower than the initial recall of CENTER.
+\addedit{Bilal}{added style of graphic Oktie suggested in PVLDB mail thread. Need confirmation from Fei if this is okay, before applying to all.}
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c|c||c|c||c|c|} \hline
+% & \multicolumn{2}{|c||}{ $\theta=0.2$ } &  \multicolumn{2}{|c||}{$\theta=0.3$} & \multicolumn{2}{|c|}{ $\theta=0.4$ } \\ \cline{2-7}
+%%     & Best & Best & Best & Best & Best & Best  \\
+%%     & $\theta=0.2$ & F$_1$ & PCPr & F$_1$ & PCPr & F$_1$ \\ \hline
+%     & Part. & Star & Part. & Star & Part. & Star \\ \hline
+%PCPr & 0.101 & 0.614 & 0.554 & 0.601 & 0.645 & 0.445\\ \hline
+%CPr & 0.991 & 0.726 & 0.946 & 0.801 & 0.879 & 0.781\\ \hline
+%Pr & 0.104 & 0.588 & 0.503 & 0.778 & 0.788 & 0.900\\ \hline
+%Re & 0.953 & 0.730 & 0.906 & 0.842 & 0.929 & 0.870\\ \hline
+%F1 & 0.177 & 0.644 & 0.622 & 0.805 & 0.850 & 0.884\\ \hline
+%%Bilal: add K and VI
+%K & 0.233 & 0.578 & 0.634 & 0.777 & 0.833 & 0.857 \\ \hline
+%VI & 0.927 & 0.347 & 0.422 & 0.177 & 0.111 & 0.100 \\ \hline
+%Cluster\# & 51 & 521 & 354 & 715 & 704 & 949\\ \hline
+%\end{tabular}
+%\end{center}
+\begin{figure*}
+\centering
+%\small
+\scriptsize
+\begin{tabular}{|ccc|} \hline
+ & & \\
+<< fig=TRUE, echo=FALSE, label=star, include=FALSE, width=3, height=3,eps=TRUE >>=
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" star-degree-overlap "))
+@
+\includegraphics[width=0.25\linewidth]{results-star}
+ &
+<< fig=TRUE, echo=FALSE, label=artpt, include=FALSE, width=3, height=3,eps=TRUE >>=
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" articulation-point "))
+@
+\includegraphics[width=0.25\linewidth]{results-artpt}
+ &
+<< fig=TRUE, echo=FALSE, label=cut, include=FALSE, width=3, height=3,eps=TRUE >>=
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" cut "))
+@
+\includegraphics[width=0.25\linewidth]{results-cut}
+\\
+ (a) STAR & (b) ArtPt & (c) CUT \\
+ & & \\
+<< fig=TRUE, echo=FALSE, label=ccpiv, include=FALSE, width=3, height=3,eps=TRUE>>=
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" cc-pivot "))
+@
+\includegraphics[width=0.25\linewidth]{results-ccpiv}
+ &
+<< fig=TRUE, echo=FALSE, label=ccl, include=FALSE, width=3, height=3,eps=TRUE>>=
+print(plot.old.algo.all.normalized.accuracy(data=old.output.error, algos="ccl"))
+@
+<< fig=TRUE, echo=FALSE, label=ap, include=FALSE, width=3, height=3,eps=TRUE>>=
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" affinity-propagation-uniform(=0) "))
+@
+\includegraphics[width=0.25\linewidth]{results-ap}
+ &
+<< fig=TRUE, echo=FALSE, label=mcl, include=FALSE, width=3, height=3,eps=TRUE>>=
+print(plot.algo.all.normalized.accuracy(data=error.medium, algos=" mcl "))
+@
+\includegraphics[width=0.25\linewidth]{results-mcl}\\
+ (d) CCPiv & (e) AP & (f) MCL \\
+\hline
+\end{tabular}
+\caption{Mean accuracy measures for Cut-based and Probablistic clustering algorithms over Medium Error Group.}
+\label{fig:calgsres}
+\end{figure*}
+
+\subsubsection{Ricochet Algorithms}
+The accuracy results for SR and BSR, presented in Table \ref{table:ricoseq}, show that these algorithms are also more effective at lower thresholds, but are overall more robust (less sensitive) across varying threshold values. The reasoning for more effective lower thresholds can be explained via the KL-heuristic and the usage of neighbourhoods for cluster formation. For lower thresholds, non-overlapping STAR performs poorly due to fragmenting and displacing duplicate records. This can be seen by the peaking of CPr and PCPr before the peaking of the k-measure in CC-Piv (see Figure\ref{fig:calgsres}). The initial cluster formed by STAR retains the most errors. All subsequent clusters are formed on a smaller and smaller join, making latter clusters more acurate. When similarity-join information is lost due to using a higher threshold, the displacement of duplicate records are less likely to occur in the initial cluster, and more likely to occur in subsequent clusters. The KL-heuristic provides the Sequential Ricochet algorithms a mechinism for dismantling the initial few clusters, by forcing record swaps with newer clusters.
+\begin{table}
+\begin{center} \scriptsize
+\begin{tabular}{|c||c|c|c||c|c|c|} \hline
+ & \multicolumn{3}{|c||}{ $\theta=0.2$ } &  \multicolumn{3}{|c|}{ $\theta=0.4$ } \\ \cline{2-7}
+  & Part. & SR & BSR & Part. & SR & BSR \\ \hline
+ PCPr & 0.101 & 0.628 & 0.466 & 0.645 & 0.590 & 0.578\\ \hline
+ CPr & 0.991 & 0.821 & 0.868 & 0.879 & 0.754 & 0.895\\ \hline
+ Pr & 0.104 & 0.989 & 0.675 & 0.788 & 0.991 & 0.828\\ \hline
+ Re & 0.953 & 0.863 & 0.932 & 0.929 & 0.818 & 0.930\\ \hline
+ F1 & 0.177 & 0.917 & 0.779 & 0.850 & 0.893 & 0.873\\ \hline
+ Cluster\# & 51 & 735 & 268 & 704 & 703 & 323\\ \hline
+\end{tabular}
+\end{center}
+\caption{Sequential Ricochet Accuracy}
+\label{table:ricoseq}
+\end{table}
+%Oktie(CR): improved the description of the results
+ OCR and CR algorithms (Table \ref{table:ricocon}), on the other hand, are very sensitive to the threshold value, and are more effective at higher $\theta$ values as shown in the table below. This is again due to different way of choosing cluster seeds (or centers) used in these algorithms. Marking all the nodes as seeds and gradually merging the clusters, as done in OCR and CR, results in higher quality clusters when the threshold value is high (i.e., the similarity graph is not dense) but does not work well when the threshold value is low (i.e., the similarity graph is very dense). On the other hand, when seeds are chosen sequentially based on the weight of the nodes, as done in SR and BSR, a lower threshold value (i.e., a dense similarity graph) results in more accurate weight values and therefore better choice of cluster seeds and higher quality clusters.
+\begin{table}
+\begin{center} \scriptsize
+\begin{tabular}{|c||c|c|c||c|c|c|} \hline
+ & \multicolumn{3}{|c||}{ $\theta=0.2$ } &  \multicolumn{3}{|c|}{ $\theta=0.5$ } \\ \cline{2-7}
+ & Part. & CR & OCR & Part. & CR & OCR\\ \hline
+% & 0.2 & 0.2 & 0.2 & 0.5 & 0.5 & 0.5\\ \hline
+PCPr & 0.101 & 0.494 & 0.351 & 0.469 & 0.402 & 0.687\\ \hline
+CPr & 0.991 & 0.967 & 0.981 & 0.805 & 0.782 & 0.817\\ \hline
+Pr & 0.104 & 0.434 & 0.299 & 0.934 & 0.958 & 0.862\\ \hline
+Re & 0.953 & 0.869 & 0.952 & 0.891 & 0.869 & 0.883\\ \hline
+F1 & 0.177 & 0.567 & 0.454 & 0.910 & 0.910 & 0.872\\ \hline
+Cluster\# & 51 & 258 & 180 & 994 & 1079 & 593\\ \hline
+\end{tabular}
+\end{center}
+\caption{Concurrent Ricochet Accuracy}
+\label{table:ricocon}
+\end{table}
+%Oktie(CR): improved the description of the results
+%Fei(CR): edited results for theta above/below 0.4.
+\subsubsection{Cut Clustering} \eat{Clustering the similarity graph based on minimum cuts improves the quality of the clustering when compared to the Partitioning algorithm, as shown in Figure \ref{fig:calgsres}. This improvement is significant as we increase the threshold up to $0.4$. For $\theta > 0.4$, CUT produces similar clusters as the Partitioning algorithm, since as the input graph becomes less dense, only significantly related records remain connected and further cutting the edges does not improve the quality of the clusters.} The quality of the clustering when compared to all other clustering algorithms is remarkably stable for the Cut Clustering algorithm (CUT). CUT is the most robust algorithm against both varying $ \theta $ thesholds and the different error groups. Variance is largely seen in the accuracy measures CPr, PCPr, VI, and K. The relative stability of K implies the courseness of the clusters is not changing. PCPr closely follows CPr, indicating CUT does relatively produce the same number of clusters. Upon closer manual inspection of the clusters, we observed CUT to produce many singleton clusters. The main take away would be that CUT suffers from the displacement of records based on the error group.
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c|c||c|c||c|c|} \hline
+% & \multicolumn{2}{|c||}{ $\theta=0.2$ } &  \multicolumn{2}{|c||}{$\theta=0.3$} & \multicolumn{2}{|c|}{ $\theta=0.4$ } \\ \cline{2-7}
+%     & Part. & MinCut & Part. & MinCut & Part. & MinCut\\ \hline
+%PCPr & 0.101 & 0.105 & 0.554 & 0.683 & 0.645 & 0.689\\ \hline
+%CPr & 0.991 & 0.509 & 0.946 & 0.891 & 0.879 & 0.875\\ \hline
+%Pr & 0.104 & 0.833 & 0.503 & 0.672 & 0.788 & 0.827\\ \hline
+%Re & 0.953 & 0.564 & 0.906 & 0.908 & 0.929 & 0.926\\ \hline
+%F1 & 0.177 & 0.671 & 0.622 & 0.771 & 0.850 & 0.873\\ \hline
+%Bilal: added K and VI measures
+%K & 0.233 & NA & 0.634 & 0.749 & 0.833 & 0.825 \\ \hline
+%VI & 0.927 & NA & 0.422 & 0.160 & 0.111 & 0.107 \\ \hline
+%Clstr\# & 51 & 2450 & 354 & 665 & 704 & 735\\ \hline
+%\end{tabular}
+%\end{center}
+%Oktie(CR): improved the description of the results
+\subsubsection{Articulation Point Clustering} \eat{As the results show in the following table,} The Articulation Point clustering (ArtPt) algorithm augments the Partitioning algorithm by splitting components in the graph into more refined clusters. The algorithm works best with the optimal threshold for the Partitioning algorithm (the $\theta$ value that creates partitions of highest quality in the Partitioning algorithm). ArtPt is follows a similar trends to Partition, however its accuracy incurrs a sudden improvement for the sparsest similarity joins. This sudden increase can be explained by the number of articulation points increasing for sparser similarity joins. As such, more overlaps will occur, resulting in improvments in cluster recall.
+Interestingly, ArtPt's conflicts with respect to VI and all other measures for large $\theta$, where VI doesn't change, but other measures begin increasing. This conflict can be attributed to overlaping clusters and how they improve the completeness of clusterings, but not in a scalable manner. That is to say, K has a bias for coarser cluster refinements, but this doesn't mean larger chunks of entities haven't been clustered properly for completeness. The increase in $\theta$ increases the number of produced clusters while reducing cluster sizes, resulting in finer clusters. The steady value for VI reflects the lack of cluster fragmentation due to overlapping clusters.
+Since the articulation points in ArtPt are dependent on a similarity graph's edge's existence, ArtPt is sensetive to both $ \theta $ and the different error groups. Although overlapping clusters should retain recall well, we observed ArtPt to perform better than STAR. This can be explained by two observations. The initial clusters of STAR are responsible for absorbing fragments. An Artpt cluster only shares articulation points with one other cluster per articulation point. As such, membership is largely non-partial, and allows for courser clusters.
+
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c|c||c|c||c|c|} \hline
+% & \multicolumn{2}{|c||}{ $\theta=0.2$ } &  \multicolumn{2}{|c||}{$\theta=0.3$} & \multicolumn{2}{|c|}{ $\theta=0.4$ } \\ \cline{2-7}
+%     & Part. & ArtPt.& Part. & ArtPt.& Part. & ArtPt.\\ \hline
+%PCPr & 0.101 & 0.169 & 0.554 & 0.655 & 0.645 & 0.680\\ \hline
+%CPr & 0.991 & 0.988 & 0.946 & 0.941 & 0.879 & 0.871\\ \hline
+%Pr & 0.104 & 0.157 & 0.503 & 0.581 & 0.788 & 0.825\\ \hline
+%Re & 0.953 & 0.920 & 0.906 & 0.891 & 0.929 & 0.925\\ \hline
+%F1 & 0.177 & 0.251 & 0.622 & 0.693 & 0.850 & 0.871\\ \hline
+%%Bilal: add K and VI
+%K & 0.233 & 0.274 & 0.634 & 0.588 & 0.833 &  0.636\\ \hline
+%VI & 0.927 & 0.890 & 0.422 & 0.329 & 0.111 &  0.074\\ \hline
+%Cluster\# & 51 & 86 & 354 & 428 & 704 & 754\\ \hline
+%\end{tabular}
+%\end{center}
+
+%Oktie(CR): improved the description of the results
+\subsubsection{Markov Clustering} According to Figure \ref{fig:calgsres}, MCL produces clusters of increased quality than those created by the Partitioning algorithm. The MCL algorithm is most effective when used with an optimal threshold value, although it is much less sensitive overall across different error groups. This shows the effectiveness of the flow simulation process using random walks on the graph. Unlike Partitioning and CR, denser similarity graphs (i.e., not pruning low-weight edges) do not result in MCL clusters with low precision. For sparser similarity joins, MCL drops in accuracy due to detecting duplicates with very high similarity only. This has been documented as one of the cases where MCL does not perform as well \cite{Don00}, where using stochastic flow becomes less meaningful.
+Observing CPr and PCPr, we can deduse that the number of clusters is very different between those produced and the ground truth. However, MCL also exihibits a high K, suggesting the produce clusters to be coarse cluster refinements for higher thresholds. This suggests the introduction of displacement errors. Upon manual inspection of the clusters, many of the clusters were singleton. From this we can infer that coarser clusters sucessfully capture records with high intra-cluster similarity. But with less join information, boundaries for these clusters become harder to identify and are displaced into singelton clusters. Our inference is based off of MCL's better retention of PCPr and CPr for higher $\theta $ values than all other algorithms.
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c|c||c|c||c|c|} \hline
+% & \multicolumn{2}{|c||}{ $\theta=0.2$ } &  \multicolumn{2}{|c||}{$\theta=0.3$} & \multicolumn{2}{|c|}{ $\theta=0.4$ } \\ \cline{2-7}
+%     & Part. & MCL & Part. & MCL & Part. & MCL \\ \hline
+%PCPr & 0.101 & 0.599 & 0.554 & 0.768 & 0.645 & 0.644\\ \hline
+%CPr & 0.991 & 0.934 & 0.946 & 0.921 & 0.879 & 0.866\\ \hline
+%Pr & 0.104 & 0.571 & 0.503 & 0.754 & 0.788 & 0.888\\ \hline
+%Re & 0.953 & 0.951 & 0.906 & 0.952 & 0.929 & 0.925\\ \hline
+%F1 & 0.177 & 0.712 & 0.622 & 0.841 & 0.850 & 0.906\\ \hline
+%%Bilal: add K and VI
+%K & 0.233 & NA & 0.634 & 0.834 & 0.833 & 0.886 \\ \hline
+%VI & 0.9L27 & NA & 0.422 & 0.106 & 0.111 & 0.067 \\ \hline
+%Cluster\# & 51 & 323 & 354 & 528 & 704 & 777\\ \hline
+%\end{tabular}
+%\end{center}
+\subsubsection{Correlation Clustering} CCPiv (see Figure \ref{fig:calgsres}) performs best when using lower to mid threshold values, producing clusters with more complex accuracy behaviour than those created by other algorithms.  The quality of the produced clusters degrade at higher $\theta$ values.  This is to be expected since the algorithm performs clustering based on correlation information between the nodes and a higher $\theta$ means a loss of this information. % Bilal: added cc-pivot
+For lower thresholds, CCPiv first maximizes recall and CPr. When these two measures decline, K is observed to hit its maximum. This is a direct consequence of CCPiv's relationship to STAR. The first few clusters introduce fragmentation in the form of record displacement errors. But as the threshold rises, the amount of comparison information reduces greatly, preventing displacement from being possible to the same extent. But as more comparison information is lost for even higher thresholds, the produced clusters begin to split into more refined clusters, resulting in a steady decrease in K, CPr, and PCPr.
+\addedit{Bilal}{CC-Pivot}
+CCPiv follows similar trends to STAR, however the quality of the clusterings is lower than STAR. This is a consequence of randomly ordering vertices, since the partition variant of STAR is similar to CCPiv and actually improves in all measure performance, with respect to the overlapping variant of STAR.
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c|c||c|c||c|c|} \hline
+% & \multicolumn{2}{|c||}{ $\theta=0.2$ } &  \multicolumn{2}{|c||}{$\theta=0.3$} & \multicolumn{2}{|c|}{ $\theta=0.4$ } \\ \cline{2-7}
+%     & Part. & CCL & Part. & CCL & Part. & CCL \\ \hline
+%PCPr & 0.101 & 0.612 & 0.554 & 0.542 & 0.645 & 0.406\\ \hline
+%CPr & 0.991 & 0.711 & 0.946 & 0.762 & 0.879 & 0.748\\ \hline
+%Pr & 0.104 & 0.596 & 0.503 & 0.803 & 0.788 & 0.914\\ \hline
+%Re & 0.953 & 0.750 & 0.906 & 0.822 & 0.929 & 0.844\\ \hline
+%F1 & 0.177 & 0.659 & 0.622 & 0.808 & 0.850 & 0.876\\ \hline
+%Cluster\# & 51 & 538 & 354 & 753 & 704 & 1000\\ \hline
+%\end{tabular}
+%\end{center}
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c|c||c|c||c|c|} \hline
+% & \multicolumn{2}{|c||}{ $\theta=0.2$ } &  \multicolumn{2}{|c||}{$\theta=0.3$} & \multicolumn{2}{|c|}{ $\theta=0.4$ } \\ \cline{2-7}
+%     & Part. & CC-Pivot & Part. & CC-Pivot & Part. & CC-Pivot \\ \hline
+%PCPr & 0.101 & 0.343 & 0.554 & 0.411 & 0.645 & 0.237 \\ \hline
+%CPr & 0.991 & 0.455 & 0.946 & 0.486 & 0.879 & 0.388 \\ \hline
+%Pr & 0.104 & 0.190 & 0.503 & 0.473 & 0.788 & 0.778 \\ \hline
+%Re & 0.953 & 0.786 & 0.906 & 0.818 & 0.929 & 0.766 \\ \hline
+%F1 & 0.177 & 0.305 & 0.622 & 0.595 & 0.850 & 0.767 \\ \hline
+%K & 0.233 & 0.629 & 0.634 & 0.802 & 0.833 & 0.849 \\ \hline
+%VI & 0.927 & 0.239 & 0.422 & 0.120 & 0.111 & 0.085 \\ \hline
+%Cluster\# & 51 & 446 & 354 & 689.75 & 704 & 957.50 \\ \hline
+%\end{tabular}
+%\end{center}
+\subsubsection{Affinity Propagation Clustering}
+The Affinity Propagation Clustering Algorithm (AP) performs best  when using lower threshold values, similar to CENTER. The K, PCPr and CPr values are consistently close for AP indicating that the number of clusterings and Precision consistently and slowly deteriorates as higher thresholds are used. This is consistent with the trend when observing the number of clusters produced. It should also be noted that AP shows a trend across the different error levels as well. As the error levels increase, AP performs better for an increased range of thresholds near lower threshold values. This trend is not directly observable from Figure \ref{fig:calgsres}. Note that AP consistently improves with respect to all accuracy measures, as lower $\theta$ values are used. Lastly, AP obtains the highest recall out of all the algorithms observed. AP's recall is consistent high across all $\theta$ values.
+\eat{\begin{center}
+\begin{figure}
+<< fig=TRUE, echo=FALSE, label=ap, include=FALSE, width=3, height=3,eps=TRUE>>=
+print(plot.algo.all.normalized.accuracy(data=output, algos=" affinity-propagation-uniform(=0) "))
+@
+\includegraphics[width=0.9\linewidth]{results-ap}
+\caption{Accuracy measures for AP.}
+\end{figure}
+\end{center}}
+%\begin{center} \scriptsize
+%\begin{tabular}{|c||c|c||c|c||c|c|} \hline
+% & \multicolumn{2}{|c||}{ $\theta=0.2$ } &  \multicolumn{2}{|c||}{$\theta=0.3$} & \multicolumn{2}{|c|}{ $\theta=0.4$ } \\ \cline{2-7}
+%     & Part. & AP & Part. & AP & Part. & AP \\ \hline
+%PCPr & 0.101 & 0.509 & 0.554 & 0.478 & 0.645 & 0.343 \\ \hline
+%CPr & 0.991 &0.544 & 0.946 & 0.510 & 0.879 & 0.354 \\ \hline
+%Pr & 0.104 & 0.707 & 0.503 & 0.683 & 0.788 & 0.476 \\ \hline
+%Re & 0.953 & 0.808 & 0.906 & 0.812 & 0.929 & 0.846 \\ \hline
+%F1 & 0.177 & 0.712 & 0.622 & 0.686 & 0.850 & 0.478 \\ \hline
+%K & 0.233 & 0.635 & 0.634 & 0.596 & 0.833 & 0.420 \\ \hline
+%VI & 0.927 & 0.246 & 0.422 & 0.280 & 0.111 & 0.490 \\ \hline
+%Cluster\# & 51 & 377 & 354 & 377 & 704 & 264.25 \\ \hline
+%\end{tabular}
+%\end{center}
+\subsection{Centrality Measures}
+\addedit{Bilal}{Note: all graphs should be using VI. VI is specifically meant for centroid related clustering, while remaining invariant of actual number of nodes. As such the measure doesn't need to be scaled, nor is it bias toward a specific clustering methodology due to the characteristics of the clustering problem-domain.}
+%Bilal: graphs for star partition, star overlap, non-arbitrary center, and affinity propagation
+%Bilal: clearly demonstrate different trend with markov steady state Centrality measure
+In this section we show the results of varying the type of centrality measure used for clustering (see Figure \ref{fig:centrality}). We show these results by using the normalized variation of information (VI) measure, which has the property of being both a true and universal metric \cite{Mei05}. As such, all other quality (distance) measures will have a tendancy to follow the same trends of VI. Thus, VI is the measure of choice for accurately conveying the results for this section.
+\addedit{Bilal}{Adding graphs back due to request for being verbose in section 6}
+\begin{figure*}
+\centering
+%\small
+\scriptsize
+\begin{tabular}{|cccc|} \hline \\
+<< fig=TRUE, echo=FALSE, label=centralitycenter, include=FALSE, width=4, height=4,eps=TRUE >>=
+center.names = c(" center ", " center-degree ",
+                 " center-sum ", " center-mean ", " center-markov ");
+print(plot.algo.all.normalized.centrality(data=error.none, measure="VI",
+                                          algos=center.names))
+@
+\includegraphics[width=0.20\linewidth]{results-centralitycenter}
+ &
+<< fig=TRUE, echo=FALSE, label=centralitystaro, include=FALSE, width=4, height=4,eps=TRUE >>=
+star.part.names = c(" star-degree-non-overlap ", " star-markov-non-overlap ",
+                    " star-sum-non-overlap "," star-mean-non-overlap ");
+print(plot.algo.all.normalized.centrality(data=error.medium, measure="VI",
+                                          algos=star.part.names))
+@
+\includegraphics[width=0.20\linewidth]{results-centralitystaro}
+ &
+<< fig=TRUE, echo=FALSE, label=centralitystarp, include=FALSE, width=4, height=4,eps=TRUE >>=
+star.names = c(" star-degree-overlap ", " star-markov-overlap ",
+                    " star-sum-overlap "," star-mean-overlap ");
+print(plot.algo.all.normalized.centrality(data=error.medium, measure="VI",
+                                          algos=star.names))
+@
+\includegraphics[width=0.20\linewidth]{results-centralitystarp}
+ &
+<< fig=TRUE, echo=FALSE, label=preferenceaffinity, include=FALSE, width=4, height=4,eps=TRUE >>=
+ap.names = c(" affinity-propagation-uniform(=0) ",
+             " affinity-propagation-sparse-min ",
+             " affinity-propagation-uniform(=1) ",
+             " affinity-propagation-mean ",
+             " affinity-propagation-sparse-median ");
+print(plot.algo.all.normalized.centrality(data=error.high, measure="VI",
+                                          algos=ap.names))
+@
+\includegraphics[width=0.20\linewidth]{results-preferenceaffinity}
+\\
+(a) CENTER & (b) STAR (Overlapping clusters) & (c) STAR (No overlapping clusters) & (d) AP \\ \hline
+\end{tabular}
+\caption{Mean VI of different centrality measures for STAR, CENTER, and AP. (a) Results for CENTER using the Single Error Group dataset. (b, c) Results for STAR, both the overlapping and non-overlapping cluster variants, using the Medium Error Group dataset. (d) Results for AP, using the  High Error Group dataset.}
+\label{fig:centrality}
+\end{figure*}
+\subsubsection{CENTER}
+The Center Clustering algorithm generally did not change across different centrality measures. The differences in performance were negligible with the exception of the Markov Steady-State (markov) centrality measure. The markov variant out-performed all other centrality variants of CENTER. In terms of accuracy, the markov variant was able to maintain a consistently low variation of information for Single Error Group data, which was accompanied with high $ F_1 $-measure and K-measure values.
+\addedit{Bilal}{removed medium graph. Unnecessary to get point accross.}
+%\begin{center}
+%      \begin{figure}
+<< fig=TRUE, echo=FALSE, label=centervimed, include=FALSE, width=3, height=3,eps=TRUE >>=
+
+plot.algo(omean=omean.err.medium, x.lab="theta", y.lab="VI",
+          algos=center.names,main="Medium error");
+@
+%\includegraphics[width=0.9\linewidth]{results-centervimed}
+%	    	\caption{CENTER performance using different centrality measures, for medium error data.}
+%        \end{figure}
+%        \end{center}
+%\begin{center}
+%      \begin{figure}
+	    	%\includegraphics[width=1\linewidth]{CENTER_VI_Skew.png}% TO REPLACE
+<< fig=TRUE, echo=FALSE, label=centervisingle, include=FALSE, width=3, height=3,eps=TRUE >>=
+plot.algo(omean=omean.err.none, x.lab="theta", y.lab="VI",
+          algos=center.names,main="Single error");
+@
+%\includegraphics[width=0.9\linewidth]{results-centervisingle}
+%	    	\caption{CENTER performance using different centrality measures, for single error data.}
+%        \end{figure}
+%        \end{center}
+\subsubsection{STAR}
+%Bilal: clearly demonstrate no difference in trends with STAR overlap.
+The Star Clustering (STAR) algorithm did not significantly change performance trends when using different centralities. This held true regardless of whether overlapping clusterings were allowed. STAR was observed to obtain better performance when using the Mean centrality-measure for lower $\theta$ values. STAR achieved larger performance gains when forming overlapping clusters with the mean centrality measure. Note, our results are consistent with past work. \cite{WB07}, but we deal with a different dataset.
+\addedit{Bilal}{removed centrality graphs as suggested by Fei.}
+%\begin{center}
+%      \begin{figure}
+<< fig=TRUE, echo=FALSE, label=staroverlapvimed, include=FALSE, width=3, height=3,eps=TRUE >>=
+star.overlap.names = c(" star-degree-overlap ",
+                       " star-evcent-overlap ", " star-kleinberg-overlap ",
+                       " star-markov-overlap ", " star-sum-overlap ",
+                       " star-mean-overlap ");
+plot.algo(omean=omean.err.medium, x.lab="theta", y.lab="VI",
+          algos=star.overlap.names ,main="Medium error");
+@
+%\includegraphics[width=0.9\linewidth]{results-staroverlapvimed}
+%                     \caption{STAR performance with overlapping clusters.}
+%    \end{figure}
+%\end{center}
+
+%\begin{center}
+%      \begin{figure}
+<< fig=TRUE, echo=FALSE, label=starpartitionvimed, include=FALSE, width=3, height=3,eps=TRUE >>=
+star.part.names = c(" star-degree-non-overlap "," star-evcent-non-overlap ",
+                    " star-kleinberg-non-overlap "," star-markov-non-overlap ",
+                    " star-sum-non-overlap "," star-mean-non-overlap ");
+plot.algo(omean=omean.err.medium, x.lab="theta", y.lab="VI",
+          algos=star.part.names ,main="Medium error");
+@
+%\includegraphics[width=0.9\linewidth]{results-starpartitionvimed}
+%                     \caption{STAR performance without overlapping clusters (partitions).}
+%        \end{figure}
+%\end{center}
+
+%Bilal: explained theta 0.1 elsewhere: for low thresholds, larger subgraphs with high centrality measures get clustered first, remaining graph is clustered similarly, with respect to centrality measure used. Larger clusterings for dense graphs act as source of fragmentation.
+
+\subsubsection{Affinity-Propagation}
+\addedit{Bilal}{stuck with VI, since consistent.}
+%Bilal:  Main thing to note is that of the preferences available, all are dependent on graph sparsity. As such, high threshold graphs require max preference for best performance, and low threshold graphs require no preference to achieve best performance. Perfect place to cite past AP versus MCL comparison for similar bioinformatics application to gene types.
+The Affinity Propagation (AP) clustering algorithm exhibited many trade-offs in its behavior.  High preference settings allowed AP to perform well for lower $\theta$ values, while lower preference settings resulted in better performance for higher $\theta$ values, with respect to the other AP variants. The sparse-median, sparse-min, and mean centrality preference settings made AP more robust for Medium and High Error Group data. Additionally, AP converged more quickly for higher preference settings. The default preference settings of AP perform best for High Error Group data, and low $\theta$-values. With dynamically changing preference settings (i.e., sparse minimum), AP outperforms other algorithms for these settings\footnote{In specific,  MCL, MC, STAR, and Transitive-Closure.}. However, a higher preference setting resulted in AP becoming robust against different amounts of string errors.
+
+%\begin{center}
+%      \begin{figure}
+<< fig=TRUE, echo=FALSE, label=apkmed, include=FALSE, width=3, height=3,eps=TRUE >>=
+affinity.names=c(" affinity-propagation-uniform(=0) ",
+                 " affinity-propagation-uniform(=1) ",
+                 " affinity-propagation-sparse-median ",
+                 " affinity-propagation-sparse-min ",
+                 " affinity-propagation-mean ");
+plot.algo(omean=omean.err.medium, x.lab="theta", y.lab="K",
+          algos=affinity.names ,main="Medium error");
+@
+%\includegraphics[width=0.9\linewidth]{results-apkmed}
+%\caption{AP K-measure performance using different vertex preferences, for Medium-level error.}
+%\end{figure}
+%\end{center}
+
+%\begin{center}
+%      \begin{figure}
+<< fig=TRUE, echo=FALSE, label=apvimed, include=FALSE, width=3, height=3,eps=TRUE >>=
+plot.algo(omean=omean.err.medium, x.lab="theta", y.lab="VI",
+          algos=affinity.names ,main="Medium error");
+@
+%\includegraphics[width=0.9\linewidth]{results-apvimed}
+%\caption{AP VI performance using different vertex preferences, for Medium-level error.}        \end{figure}
+%\end{center}
+
+%\begin{center}
+%      \begin{figure}
+<< fig=TRUE, echo=FALSE, label=apkhi, include=FALSE, width=3, height=3,eps=TRUE >>=
+plot.algo(omean=omean.err.high, x.lab="theta", y.lab="K",
+          algos=affinity.names ,main="High error");
+@
+%\includegraphics[width=\linewidth]{results-apkhi}
+%\caption{AP K-measure performance using different vertex preferences, for High-level error.}        \end{figure}
+%\end{center}
+
+%\begin{center}
+%      \begin{figure}
+<< fig=TRUE, echo=FALSE, label=apvihi, include=FALSE, width=3, height=3,eps=TRUE >>=
+plot.algo(omean=omean.err.high, x.lab="theta", y.lab="VI",
+          algos=affinity.names ,main="High error");
+@
+%\includegraphics[width=0.9\linewidth]{results-apvihi}
+%\caption{AP VI performance using different vertex preferences, for High-level error.}        \end{figure}
+%\end{center}
+
+
+
+\subsection{Overall Comparison}
+\addedit{Bilal}{Moved summary as per Fei's suggestion.}
+In this section, we present more general impressions of the results. A summary is presented in Table \ref{table:summary}. 
+
+%Oktie(CR): improved the description of the results
+\subsubsection{Threshold Sensitivity} \eat{Table \ref{tbl:all-acc-thr} shows the accuracy results of all the algorithms for different thresholds over the Medium Error Group datasets. These results can be used to compare different algorithms when using a fixed threshold, i.e., with the same similarity graph as input.} Among all the algorithms, SR, CUT, and BSR are least sensitive to the threshold value. However their accuracy does not always outperform the other algorithms.
+In other algorithms, those that use the weight and degree of edges for clustering perform relatively better with lower threshold values, when the similarity graph is more dense. CENTER, STAR, CCPiv and MCL algorithms performed better with low threshold values when compared with other algorithms. The single-pass algorithms along with articulation-point clustering were generally more sensitive to the threshold value and were considerably more effective when used with the optimal threshold (where the number of components in the graph is close to the number of ground truth clusters)\eat{, with CUT and MC being the least sensitive among them}.
+\addedit{Bilal}{removed this table because all this information present in prior graphics}
+%Although Correlation clustering and MCL outperform the other algorithms at lower thresholds, they lose their accuracy using higher threshold values.
+%CENTER, MERGE-CENTER and Articulation Point algorithms are considerably more effective when the number of components in the graph is close to the number of ground truth clusters.
+%\begin{table*} [ht]
+%\caption{Average accuracy of all the algorithms for different thresholds over medium-error datasets} % that result in the best F1 measure and the best PCPr measure values}
+%\label{tbl:all-acc-thr}
+%\scriptsize
+%\begin{center}
+%\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
+%%     & \multicolumn{4}{|c||}{ Dirty } & \multicolumn{4}{|c||}{ Medium } & \multicolumn{4}{|c|}{ Low } \\ \cline{2-13}
+%%     & \multicolumn{2}{|c||}{ Partitioning } &  \multicolumn{2}{|c||}{ CENTER } & \multicolumn{2}{|c||}{ Partitioning } &  %\multicolumn{2}{|c||}{ CENTER } & \multicolumn{2}{|c||}{ Partitioning } &  \multicolumn{2}{|c|}{ CENTER } \\ \cline{2-13}
+%$\theta$ & Measure & Part. & CENTER & MC & Star & SR & BSR & CR & OCR & CCL & MCL & MinCut & ArtPt.\\ \hline
+%0.2 & PCPr & 0.101 & 0.593 & 0.257 & 0.614 & 0.628 & 0.466 & 0.494 & 0.351 & 0.612 & 0.599 & 0.105 & 0.169\\
+% & F1 & 0.177 & 0.666 & 0.389 & 0.644 &  \textit{0.917} & 0.779 & 0.567 & 0.454 & 0.659 & 0.712 &  0.671 & 0.251\\
+% & Cluster\# & 51 & 472 & 134 & 521 & 735 & 268 & 258 & 180 & 538 & 323 &  2450 & 86\\ \hline
+%0.3 & PCPr & 0.554 & 0.638 & 0.695 & 0.601 & 0.616 & 0.564 & 0.718 & 0.578 & 0.542 &  \textit{0.768} & 0.683  & 0.655\\
+% & F1 & 0.622 & 0.825 & 0.776 & 0.805 & 0.907 & 0.863 & 0.791 & 0.718 & 0.808 & 0.841 & 0.771  & 0.693\\
+% & Cluster\# & 354 & 697 & 459 & 715 & 721 & 315 & 527 & 306 & 753 & 528 &  665 & 428\\ \hline
+%0.4 & PCPr & 0.645 & 0.445 & 0.692 & 0.445 & 0.590 & 0.578 & 0.640 & 0.629 & 0.406 & 0.644 &  0.689 & 0.680\\
+% & F1 & 0.850 & 0.887 & 0.894 & 0.884 & 0.893 & 0.873 & 0.887 & 0.819 & 0.876 & 0.906 &  0.873 & 0.871\\
+% & Cluster\# & 704 & 956 & 750 & 949 & 703 & 323 & 786 & 454 & 1000 & 777 & 735 & 754\\ \hline
+%% 0.5 & PCPr & 0.469 & 0.298 & 0.437 & 0.315 & 0.560 & 0.552 & 0.402 & 0.687 & 0.281 & 0.423 &  0.465 & 0.409\\
+%%     & F1   & 0.910 & 0.877 & 0.918 & 0.892 & 0.874 & 0.861 & 0.910 & 0.872 & 0.867 & 0.921 & 0.913  & 0.907\\
+%%     & Cluster\# & 994 & 1305 & 1030 & 1255 & 678 & 324 & 1079 & 593 & 1340 & 1048 & 998  & 1069\\ \hline
+%0.6 & PCPr & 0.284 & 0.225 & 0.275 & 0.234 & 0.546 & 0.527 & 0.264 & 0.546 & 0.000 & 0.273 & 0.284 & 0.264\\
+% & F1 & 0.897 & 0.841 & 0.892 & 0.861 & 0.847 & 0.839 & 0.886 & 0.851 & 0.183 & 0.892 &  0.897 & 0.887\\
+% & Cluster\# & 1345 & 1650 & 1378 & 1593 & 634 & 323 & 1435 & 746 & 4979 & 1382 & 1345 & 1438\\ \hline
+%%0.7 & PCPr  & 0.203 & 0.190 & 0.201 & 0.192 & 0.555 & 0.496 & 0.199 & 0.464 & 0.000 & 0.202 & 0.203  & 0.198\\
+%%  & F1        & 0.838 & 0.798 & 0.833 & 0.809 & 0.806 & 0.804 & 0.827 & 0.792 & 0.183 & 0.834 &  0.838 & 0.826\\
+%%  & Cluster\# & 1793 & 1979 & 1815 & 1953 & 566 & 317 & 1853 & 835 & 4979 & 1804 & 1793  & 1868\\ \hline
+%0.8 & PCPr & 0.175 & 0.173 & 0.174 & 0.173 & 0.604 & 0.458 & 0.174 & 0.340 & 0.000 & 0.175 &  0.175 & 0.174\\
+% & F1 & 0.773 & 0.757 & 0.768 & 0.761 & 0.768 & 0.730 & 0.768 & 0.730 & 0.183 & 0.772 & 0.773  & 0.765\\
+% & Cluster\# & 2173 & 2232 & 2188 & 2227 &  \textit{504} & 307 & 2196 & 1709 & 4979 & 2176 &  2173 & 2209\\ \hline
+%\end{tabular}
+%\end{center}
+%\vspace{-20pt}
+%\end{table*}
+\subsubsection{Amount of Errors}
+%Oktie(CR): explained more
+The results in Table \ref{tbl:all-acc-amount} show the best accuracy values obtained by the algorithms on datasets with different amounts of error, along with the difference (Diff.) between the value obtained for the High Error to Low Error Groups of datasets.
+Note that the accuracy numbers in this table cannot be used to directly compare the algorithms since they are based on different thresholds, and the input similarity graph is different for each algorithm. We use these results to compare the effect of the amount of error. These results suggest that the Ricochet group of algorithms, CUT and MCL algorithm are relatively more robust on datasets with different amounts of errors, i.e., they perform equally well on the three groups of datasets with lowest drop in the cluster quality.
+%Bilal: added center-markov bit regarding single errors
+\addedit{Bilal}{Already stated in centrality portion. Also out of place.}
+\eat{Although different centrality-measures did not provide drastic improvements over different error levels, the markov-steady-state centrality-measure attained the best threshold-invariant performance improvements for CENTER, with respect to data containing only single errors.}
+%Oktie(CR): changed the order of the rows to (Low, Medium, High) (it was High, Medium, Low)
+<<echo=FALSE >>=
+accuracy.calc <- function(x, theta.range=1:9/10, algo=" partition ", acc="VI",
+                          the.max=TRUE) 
+{
+  high.err = c(" ./../data/scores_cu1_weightedjaccardbm25.csv ",
+              " ./../data/scores_cu2_weightedjaccardbm25.csv ")
+  med.err = c(" ./../data/scores_cu3_weightedjaccardbm25.csv ",
+              " ./../data/scores_cu4_weightedjaccardbm25.csv ",
+              " ./../data/scores_cu5_weightedjaccardbm25.csv ",
+              " ./../data/scores_cu6_weightedjaccardbm25.csv ")
+  low.err = c(" ./../data/scores_cu7_weightedjaccardbm25.csv ",
+              " ./../data/scores_cu8_weightedjaccardbm25.csv ")
+  
+  x <- x[ as.character(x$algo) %in% algo, ]; # select algo
+  x <- x[ as.numeric(x$theta) %in% theta.range, ];# select thetas
+  x3 <- x[ as.character(x$file) %in% high.err, ];# select data sources
+  x2 <- x[ as.character(x$file) %in% med.err, ];# select data sources
+  x1 <- x[ as.character(x$file) %in% low.err, ];# select data sources
+  if (the.max){
+    ma1 <- max(x1[[acc]]);
+    ma2 <- max(x2[[acc]]);
+    ma3 <- max(x3[[acc]]);
+    ma4 <- min(ma1, ma2, ma3) - max(ma1, ma2, ma3);
+  } else {
+    ma1 <- min(x1[[acc]]);
+    ma2 <- min(x2[[acc]]);
+    ma3 <- min(x3[[acc]]);
+    ma4 <- min(ma1, ma2, ma3) - max(ma1, ma2, ma3);
+  }
+  return(c(format(ma1,digits=3, scientific=FALSE),
+           format(ma2,digits=3, scientific=FALSE),
+           format(ma3,digits=3, scientific=FALSE),
+           format(ma4,digits=3, scientific=FALSE)));    
+}
+@
+\begin{table*}[ht]
+\caption{Best accuracy values for all the algorithms over different groups of datasets}
+\label{tbl:all-acc-amount}
+\scriptsize
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
+Measure & Group & Part. & CENTER & MC & Star & SR & BSR & CR & OCR & MCL & CUT & ArtPt. & CCPiv. & AP \\ \hline
+Max. & Low & 0.842 & 0.849 & 0.904 & 0.841 & 0.854 & 0.661 & 0.918 & 0.847 & 0.921 & 0.855 & 0.900 & 0.655 & 0.359 \\
+PCPr & Medium & 0.645 & 0.638 & 0.695 & 0.614 & 0.633 & 0.578 & 0.718 & 0.687 & 0.768 & 0.689 & 0.680 & 0.410 & 0.513 \\
+	 & High & 0.399 & 0.217 & 0.340 & 0.197 & 0.538 & 0.461 & 0.632 & 0.557 & 0.476 & 0.232 & 0.278 & 0.084 & 0.630 \\ \cline{2-15}
+     & Diff. & -0.443 & -0.632 & -0.565 & -0.644 & -0.316 & -0.201 & -0.286 & -0.290 & -0.445 & -0.623 & -0.621 & -0.571 & -0.270 \\ \hline
+Max. & Low & 0.959 & 0.956 & 0.960 & 0.953 & 0.976 & 0.918 & 0.957 & 0.917 & 0.960 & 0.959 & 0.957 & 0.913 & 0.558 \\
+F1   & Medium & 0.910 & 0.887 & 0.918 & 0.892 & 0.920 & 0.873 & 0.910 & 0.872 & 0.921 & 0.913 & 0.907 & 0.781 & 0.712 \\
+     & High & 0.685 & 0.640 & 0.734 & 0.660 & 0.853 & 0.695 & 0.733 & 0.640 & 0.760 & 0.760 & 0.668 & 0.441 & 0.831 \\ \cline{2-15}
+     & Diff. & -0.273 & -0.316 & -0.225 & -0.292 & -0.123 & -0.223 & -0.223 & -0.277 & -0.199 & -0.198 & -0.288 & -0.472 & -0.273 \\ \hline
+
+Min. & Low & 0.030 & 0.009 & 0.029 & 0.037 & 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-sr ", acc="VI",the.max=FALSE)[1])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-bsr ", acc="VI",the.max=FALSE)[1])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-cr ", acc="VI",the.max=FALSE)[1])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-ocr ", acc="VI",the.max=FALSE)[1])
+@
+& 0.0278 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" mcl ", acc="VI",the.max=FALSE)[1])
+@
+& 0.001 & 0.033 & 0.380\\
+
+VI & Medium & 0.070 & 0.035 & 0.072 & 0.080 & 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-sr ", acc="VI",the.max=FALSE)[2])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-bsr ", acc="VI",the.max=FALSE)[2])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-cr ", acc="VI",the.max=FALSE)[2])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-ocr ", acc="VI",the.max=FALSE)[2])
+@
+& 0.067 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" mcl ", acc="VI",the.max=FALSE)[2])
+@
+& 0.01 & 0.085 & 0.245\\
+
+     & High & 0.198 & 0.070 & 0.197 & 0.198 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-sr ", acc="VI",the.max=FALSE)[3])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-bsr ", acc="VI",the.max=FALSE)[3])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-cr ", acc="VI",the.max=FALSE)[3])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-ocr ", acc="VI",the.max=FALSE)[3])
+@
+     & 0.154 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" mcl ", acc="VI",the.max=FALSE)[3])
+@
+     & 0.001 & 0.200 & 0.142\\ \cline{2-15}
+     & Diff. & -0.167 & -0.061 & -0.168 & -0.161 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-sr ", acc="VI",the.max=FALSE)[4])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-bsr ", acc="VI",the.max=FALSE)[4])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-cr ", acc="VI",the.max=FALSE)[4])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-ocr ", acc="VI",the.max=FALSE)[4])
+@
+     & -0.126 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" mcl ", acc="VI",the.max=FALSE)[4])
+@
+     & -0.017 & -0.167 & -0.238 \\ \hline
+     
+Max. & Low & 0.948 & 0.982 & 0.950 & 0.952 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-sr ", acc="K")[1])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-bsr ", acc="K")[1])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-cr ", acc="K")[1])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-ocr ", acc="K")[1])
+@
+& 0.952 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" mcl ", acc="K")[1])
+@
+& 0.860 & 0.942 & 0.487 \\
+
+K & Medium & 0.877 & 0.932 & 0.873 & 0.872 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-sr ", acc="K")[2])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-bsr ", acc="K")[2])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-cr ", acc="K")[2])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-ocr ", acc="K")[2])
+@
+& 0.886 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" mcl ", acc="K")[2])
+@
+& 0.635 & 0.849 & 0.635 \\
+     & High & 0.642 & 0.873 & 0.638 & 0.698 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-sr ", acc="K")[3])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-bsr ", acc="K")[3])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-cr ", acc="K")[3])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-ocr ", acc="K")[3])
+@
+     & 0.731 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" mcl ", acc="K")[3])
+@
+     & 0.353 & 0.624 & 0.755 \\  \cline{2-15}
+     
+     & Diff. & -0.306 & -0.107 & -0.311 & -0.254 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-sr ", acc="K")[4])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-bsr ", acc="K")[4])
+@
+& 
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-cr ", acc="K")[4])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" ricochet-ocr ", acc="K")[4])
+@
+     & -0.220 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" mcl ", acc="K")[4])
+@
+     & -0.507 & -0.317 & -0.268 \\ \hline
+     
+Best & Low & 428 & 460 & 460 & 471 & 501 & 364 & 468 & 445 & 471 & 434 & 458 & 554 & 276\\
+Cluster\# & Medium & 354 & 472 & 459 & 521 & 504 & 386 & 527 & 454 & 528 & 665 & 428 & 446 & 377\\
+     & High & 919 & 203 & 200 & 221 & 470 & 356 & 643 & 455 & 236 & 1404 & 143 & 200 & 517 \\ \cline{2-15}
+     & Diff. & +491 & -257 & -260 & -250 & -32 & -8 & +175 & +11 & -235 & +970 & -315 & +245 & -240 \\ \hline
+\end{tabular}
+\end{center}
+\vspace{-10pt}
+\end{table*}
+%\textbf{Effect of the type of errors}
+%Oktie: Maybe add later...
+\subsubsection{Sensitivity to Error Distribution} Table \ref{tbl:all-acc-dist} shows the best accuracy values obtained for the algorithms on Medium Error Group datasets with uniform and Zipfian distributions. Note that in the Zipfian dataset, there are many records with no duplicates (singleton clusters) and only a few records with many duplicates. PCPr is less indicative of the performance of the algorithms on this class of datasets. Our results show all  algorithms are equally robust with respect to the distribution of errors, except for BSR and OCR which produce clusters of significantly lower quality.
+%Bilal: added reasoning
+For the sequential algorithms, this is primarily due to the initial step of placing all vertices in one clustering. Even with the KL-heuristic, there is no mechanism in place for the representative of the initial clustering to disassociate with singletons present in the graph. As such, singletons should be clustered and removed prior to applying the algorithm, and merged with the produced cluster. (We do this for our implementation of these algorithms.)
+%Oktie(CR): Removed PCPr to avoid confusion
+<<echo=FALSE >>=
+accuracy.calc2 <- function(x, theta.range=1:9/10, algo=" partition ", acc="VI",
+                          the.max=TRUE) 
+{
+  med.err = c(#" ./../data/scores_cu3_weightedjaccardbm25.csv "
+              #, " ./../data/scores_cu4_weightedjaccardbm25.csv "
+               " ./../data/scores_cu5_weightedjaccardbm25.csv "
+              , " ./../data/scores_cu6_weightedjaccardbm25.csv "
+              ) # Told by Oktie that only two had been used
+  #Only data set that could be producing ~1000 clusters made available
+  zipf.med.err = c(" ./../data/scores_10k_weightedjaccardbm25.csv ")
+  
+  x <- x[ as.character(x$algo) %in% algo, ]; # select algo
+  x <- x[ as.numeric(x$theta) %in% theta.range, ];# select thetas
+  x2 <- x[ as.character(x$file) %in% zipf.med.err, ];# select data sources
+  x1 <- x[ as.character(x$file) %in% med.err, ];# select data sources
+  by1 = list(x1[["theta"]]);
+  x1 <- aggregate(x = x1, by = by1, FUN = "mean");
+  if (the.max){
+    ma1 <- max(x1[[acc]]);
+    ma2 <- max(x2[[acc]]);
+    ma3 <- abs(ma1-ma2)
+  } else {
+    ma1 <- min(x1[[acc]]);
+    ma2 <- min(x2[[acc]]);
+    ma3 <- abs(ma1- ma2)
+  }
+  return(c(format(ma1,digits=3, scientific=FALSE),
+           format(ma2,digits=3, scientific=FALSE),
+           format(ma3,digits=2, scientific=FALSE)));    
+}
+
+cluster.calc2 <- function(x, theta.range=1:9/10, algo=" partition ") 
+{
+  acc="ClusterNum"
+  med.err = c(#" ./../data/scores_cu3_weightedjaccardbm25.csv "
+              #, " ./../data/scores_cu4_weightedjaccardbm25.csv "
+               " ./../data/scores_cu5_weightedjaccardbm25.csv "
+              , " ./../data/scores_cu6_weightedjaccardbm25.csv "
+              ) # Told by Oktie that only two had been used
+  #Only data set that could be producing ~1000 clusters made available
+  zipf.med.err = c(" ./../data/scores_10k_weightedjaccardbm25.csv ")
+  
+  x <- x[ as.character(x$algo) %in% algo, ]; # select algo
+  x <- x[ as.numeric(x$theta) %in% theta.range, ];# select thetas
+  x2 <- x[ as.character(x$file) %in% zipf.med.err, ];# select data sources
+  x1 <- x[ as.character(x$file) %in% med.err, ];# select data sources
+  by1 = list(x1[["theta"]]);
+  x1 <- aggregate(x = x1, by = by1, FUN = "mean");
+  ma1 <- x1[[acc]][which.min(abs(500-x1[[acc]]))];
+  ma2 <- x2[[acc]][which.min(abs(1000-x2[[acc]]))];
+  ma3 <- min(ma1, ma2) - max(ma1, ma2);
+  return(c(format(ma1,digits=4, scientific=FALSE),
+           format(ma2,digits=4, scientific=FALSE),
+           format(ma3,digits=4, scientific=FALSE)));    
+}
+@
+\begin{table*}[ht]
+\caption{Best accuracy values for algorithms over Medium Error Group datasets with different distributions}
+\label{tbl:all-acc-dist}
+\scriptsize
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
+Measure & Group & Part. & CENTER & MC & Star & SR & BSR & CR & OCR & MCL & CUT & ArtPt.& CC-PIV & AP\\ \hline
+F1 & Uniform & 0.910 & 0.887 & 0.918 & 0.892 & 0.920 & 0.873 & 0.910 & 0.872 & 0.921 & 0.721 & 0.907 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" cc-pivot ", acc="F1")[1])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" affinity-propagation-uniform(=0) ", acc="F1")[1])
+@
+\\
+ & Zipfian & 0.936 & 0.936 & 0.938 & 0.934 & 0.873 & 0.463 & 0.935 & 0.697 &  0.937 & 0.819 & 0.934 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" cc-pivot ", acc="F1")[2])
+@
+ &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" affinity-propagation-uniform(=0) ", acc="F1")[2])
+@
+ \\  \cline{2-15}
+ & Diff. & +0.026 & +0.049 & +0.020 & +0.041 & -0.047 & -0.411 & +0.025 & -0.175 & +0.016 & +0.098 & +0.027 &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" cc-pivot ", acc="F1")[3])
+@
+ &
+<<results=tex, echo=FALSE>>=
+cat(accuracy.calc(x=output, algo=" affinity-propagation-uniform(=0) ", acc="F1")[3])
+@
+ \\ \hline
+Cluster\# & Uniform & 354 & 472 & 459 & 521 & 504 & 386 & 527 & 454 & 528 & 665 & 428 &
+<<results=tex, echo=FALSE>>=
+cat(cluster.calc2(x=output, algo=" cc-pivot ")[1])
+@
+&
+<<results=tex, echo=FALSE>>=
+cat(cluster.calc2(x=output, algo=" affinity-propagation-uniform(=0) ")[1])
+@
+\\
+ & Zipfian & 1018 & 934 & 1047.5 & 933 & 698.5 & 158 & 1061 & 992 & 1021 & 1038 & 1067 &
+<<results=tex, echo=FALSE>>=
+cat(cluster.calc2(x=output, algo=" cc-pivot ")[2])
+@
+ &
+<<results=tex, echo=FALSE>>=
+cat(cluster.calc2(x=output, algo=" affinity-propagation-uniform(=0) ")[2])
+@
+ \\ \hline
+\end{tabular}
+\end{center}
+%\vspace{-10pt}
+\end{table*}
+\subsubsection{Clusters Size Effectiveness} The results of our experiments, partly shown in Tables \eat{\ref{tbl:all-acc-thr},}\ref{tbl:all-acc-amount} and \ref{tbl:all-acc-dist}, show that none of the algorithms are capable of accurately predicting the number of clusters regardless of the characteristics of the dataset. For uniform datasets, SR algorithms perform extremely well for finding the correct number of clusters on datasets with different amounts of errors. However, this algorithm fails when it comes to datasets with a Zipfian distribution of errors. Overall, algorithms that find star-shaped clusters, namely CENTER, MC, STAR, CR 
+%Bilal: Changed dataset to clusterings
+and OCR algorithms, can effectively find the right number of clusters with an optimal threshold.  CC-PIV and MCL also find a reasonable number of clusters at lower thresholds.
+
+\subsection{Run Time and Scalability}
+As stated previously, in this work we focus mainly on comparing the quality of duplicates detected by
+each algorithm. However we do report the running times in this section, but the times taken by the different algorithms are not directly comparable, and should be taken as an upper bound on the computation time. All the implementations could be optimized further. R language implementations are used to run these experiments on the same machine. 
+\addedit{Bilal to All}{changed to running times of algorithm implementations in libcluster}
+The table below shows the running times for the algorithms run using Medium Error Group data with uniformly distributed errors described in Section \ref{subsec:datasets}, and with a threshold inclusively above 0.5. 
+\addedit{Bilal}{removed different PC's with one and with R language.}
+\eat{PC1 is a Dell 390 Precision desktop with 2.66
+GHz Intel Core2 Extreme Quad-Core Processor QX6700, 4GB of RAM running 32-bit Windows Vista. PC2 is an AMD OPTERON 850 2.4GHz,
+ 16 GB of RAM running Red Hat Linux 3.4.  PC3 is a Dual Core AMD Opteron Processor 270 (2GHz) with 6GB of memory running Red Hat Linux 2.6.} All experiments were run on a computer with an Intel Core i7-2600 processor (3.4GHz), 12GB of RAM, and running the Ubuntu (12.04.1 LTS) operating system.
+\addedit{Bilal}{changed timings}
+<<echo=FALSE >>=
+runtime.calc <- function(x, theta.range=6:9/10, algo=" partition ",
+                         data.source=c
+                         (" ./../data/scores_cu3_weightedjaccardbm25.csv ",
+                          " ./../data/scores_cu4_weightedjaccardbm25.csv ",
+                          " ./../data/scores_cu5_weightedjaccardbm25.csv ",
+                          " ./../data/scores_cu6_weightedjaccardbm25.csv ")) 
+{
+  x <- x[ as.character(x$algo) %in% algo, ]; # select algo
+  x <- x[ as.numeric(x$theta) %in% theta.range, ];# select thetas
+  x <- x[ as.character(x$file) %in% data.source, ];# select data sources
+  return(c(format(aggregate(x = x, by=list(x$algo), FUN = "mean")$elapsed,
+                  digits=3, scientific=TRUE),
+           "&",
+           format(aggregate(x = x, by=list(x$algo), FUN = "sd")$elapsed,
+                  digits=3, scientific=TRUE)));
+}
+@
+\begin{table}
+\begin{center}
+\small
+%\begin{tabular}{cc}
+\begin{tabular}{|l|c|c|} \hline
+ Algorithm     & Mean (sec) & Stand. Dev(sec)   \\ \hline
+ 
+ Partitioning  
+ & 
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output));
+@
+\\ \hline
+ CENTER        
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" center "));
+@
+ \\ \hline
+ MC            
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" merge-center "));
+@
+ \\ \hline
+ STAR          
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" star-degree-overlap "));
+@
+ \\ \hline
+ CUT		       
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" cut "));
+@
+ \\ \hline
+ ArtPt.        
+ & 
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" articulation-point "));
+@
+ \\ \hline
+ CC-PIV.       
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" cc-pivot "));
+@
+ \\ \hline 
+ MCL           
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" mcl "));
+@
+ \\ \hline
+ AP            
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" affinity-propagation-uniform(=0) "));
+@
+ \\ \hline
+ SR            
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" ricochet-sr "));
+@
+ \\ \hline
+ BSR           
+ & 
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" ricochet-bsr "));
+@
+ \\ \hline
+ CR            
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" ricochet-cr "));
+@
+\\ \hline
+ OCR           
+ &
+<<results=tex, echo=FALSE>>=
+cat(runtime.calc(x=output, algo=" ricochet-ocr "));
+@
+ \\ \hline
+\end{tabular}
+
+% &
+%\end{tabular}
+%\label{ }
+\end{center}
+\caption{Mean and standard deviation runtimes for uniform medium error level data.}
+\label{table:runsense}
+\end{table}
+\eat{The implementation for the Ricochet algorithms required building a complete similarity graph in memory. Therefore, running the algorithm on the dataset of 100K records required keeping a graph with 100 billion edges in memory which was not possible. We therefore had to limit the size of the dataset for these experiments.  We used a dataset of 5K records with threshold $\theta=0.1$ resulting in 391,706 edges.  The running times are shown in the table below, along with the runtime for Affinity Propagation.
+\addedit{Bilal}{showed R implementation runtimes.}
+\begin{table}
+\begin{center} \small
+\begin{tabular}{|l|c|c|}   \hline
+ Algorithm     &  Time       & Lang./Machine  \\ \hline
+ SR	 		   &  19.687 sec & Java/PC1  \\ \hline
+ BSR           &  54.115 sec & Java/PC1  \\ \hline
+ CR 		   &  9.211 sec  & Java/PC1  \\ \hline
+ OCR           &  8.972 sec  & Java/PC1  \\ \hline
+\end{tabular}
+\end{center}
+\end{table}}
+These results support the scalability of single-pass algorithms as well as MCL and Articulation Point clustering algorithms. Note that we used the original description of the MCL algorithm which \eat{is highly optimized} does not take advantage of approximating matrix operations.
+\addedit{Bilal}{scalability}
+%Bilal: runtime normalized by max.runtime, rather than runtime.  Uniform shape = scalable (uniform and close to one = very scalable). Growth = less scalable. Erradic = not stable. (See if you can remove theta of 0.3)
+In order to address more direct comparisons, we reimplemented many of the clustering algorithms in the R programming language, allowing a more consistent scalability comparison. Our scalability evaluations compare runtimes (normalized by maximum runtime) over the density of the similarity-join, $ {|E|}/{{|V| \choose 2}} $.
+\eat{These were run on PC4.}
+Note, the type of graphic plot used in Figure \ref{fig:scale} was generated using Loess regression to smoothen trends. Smoothening allowed easy visualization of experimental results patterns in the presence of overplotting \cite{fox02}. We show the Loess regression trends of these comparisons.
+We found the single-pass algorithms to be the most scalable, followed by ArtPt, CCPiv, and then STAR. Although AP was found to be scalable, it's runtime was not stable (for low preference settings), relative to other algorithms. In comparison, CUT and MCL were found to be less scalable. STAR and CCPiv have larger initial runtimes because they are sensitive to both the similarity join size, and the number of vertices considered. In this case, join size becomes the determining factor of scalability for denser cases.
+%\begin{center}
+%\begin{figure}
+<< fig=TRUE, echo=FALSE, label=scale, include=FALSE, width=6, height=6,eps=TRUE >>=
+print(plot.algo.all.normalized.scalability(data=output))
+@
+%\includegraphics[width=0.9\linewidth]{results-scale}
+%\caption{}
+%\end{figure}
+%\end{center}
+\begin{figure*}
+\centering
+%\small
+\scriptsize
+\begin{tabular}{|cc|} \hline
+ & \\
+<< fig=TRUE, echo=FALSE, label=scale1, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(
+  plot.algo.all.normalized.scalability(
+    data=output,
+    algos=c(" articulation-point ",
+            " cc-pivot ", " center ", " merge-center ", " partition ",
+            " star-degree-overlap ", " affinity-propagation-uniform(=1) ")))
+@
+\includegraphics[width=0.45\linewidth]{results-scale1}
+ &
+<< fig=TRUE, echo=FALSE, label=scale2, include=FALSE, width=4, height=4,eps=TRUE >>=
+print(
+  plot.algo.all.normalized.scalability(
+    data=output,
+    algos=c(" affinity-propagation-uniform(=0) ", " mcl ", " cut ",
+            " ricochet-sr ", " ricochet-bsr ",
+            " ricochet-cr ", " ricochet-ocr ")))
+@
+\includegraphics[width=0.45\linewidth]{results-scale2}
+\\ \hline
+\end{tabular}
+\caption{Scalability Comparisons. These graphs compare normalized runtime (normalized by the max runtime for an algorithm) and edge density (of the similarity graph). A uniform trend indicates the algorithm to be scalable. The closer the entire trend is to $1$ for normalized runtime, the more stable its execution behaviour. Sharp growth indicates sensitivity to the size of the similarity-join. Trend decline indicates sensitivity to other factors. These graphics use a log-log scale and show the loess regression of the normalized runtimes.}
+\label{fig:scale}
+\end{figure*}
+
+%\begin{center}
+%\begin{figure}
+<< fig=TRUE, echo=FALSE, label=singlescale, include=FALSE, width=3, height=3,eps=TRUE >>=
+  plot.graph.scale.edges(omean=omean, theta=0.3, categories=single.pass.algo);
+@
+%\includegraphics[width=0.9\linewidth]{results-singlescale}
+%\caption{Scalability of single pass algorithms.}
+%\end{figure}
+%\end{center}
+%\begin{center}
+%\begin{figure}
+<< fig=TRUE, echo=FALSE, label=cutscale, include=FALSE, width=3, height=3,eps=TRUE >>=
+  plot.graph.scale.edges(omean=omean, theta=0.3, categories=cut.based.algo);
+@
+%\includegraphics[width=0.9\linewidth]{results-cutscale}
+%\caption{Scalability of cut-based clustering algorithms.}
+%\end{figure}
+%\end{center}
+%\begin{center}
+%\begin{figure}
+<< fig=TRUE, echo=FALSE, label=probscale, include=FALSE, width=3, height=3,eps=TRUE >>=
+  plot.graph.scale.edges(omean=omean, theta=0.3, categories=prob.algo);
+@
+%\includegraphics[width=0.9\linewidth]{results-probscale}
+%\caption{Scalability of probablistic clustering algorithms.}
+%\end{figure}
+%\end{center}
+\begin{table*}[h]
+\begin{center}\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ & &  & \multicolumn{3}{|c|}{ Robustness Against } \\ \cline{4-6}
+ Algorithm & Scalability & Ability to Find Correct Number of Clusters & Chosen threshold & Error Amount & Error Distribution \\ \hline
+Part.  & H & L & L & L & H \\ \hline
+CENTER & H & H & L & L & H \\ \hline
+MC     & H & H & L & L & H \\ \hline
+STAR   & M & H & L & L & H \\ \hline
+SR     & L & M & H & H & L \\ \hline
+BSR    & L & L & H & H & L \\ \hline
+CR     & L & H & M & H & H \\ \hline
+OCR    & L & H & M & H & L \\ \hline
+\eat{CCL    & L & H & L & L & H \\ \hline}
+CCPiv  & H & H & L & M & H \\ \hline
+MCL    & M & H & M & M & H \\ \hline
+CUT    & L & L & L & L & H \\ \hline
+ArtPt  & H & M & L & L & H \\ \hline
+AP     & H & H & L & L & M \\ \hline
+\end{tabular}
+\caption{Summary of the results. (H = High, M = Medium, L = Low)}
+\label{table:summary}
+\end{center}
+\end{table*}
