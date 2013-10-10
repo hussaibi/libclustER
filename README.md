@@ -25,5 +25,5 @@ Familiarize yourself with igraph library before using libclustER.
 
 Note:
 -----
-All clustering functions are meant to take in an igraph object as input. They are suffixed with `.cluster` or `.clustering`
+All clustering functions are meant to take in an igraph object as input. They are suffixed with `.cluster` or `.clustering`.
 All clustering functions return clusterings as a list of vectors.
