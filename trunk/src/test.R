@@ -79,45 +79,45 @@ data.sources.run.graph.scale <- function()
 {
   #the cu's
   data.trials.graph.scale(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.graph.scale(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.graph.scale(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.graph.scale(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -192,45 +192,45 @@ data.sources.run.graph.metrics <- function()
 {
   #the cu's
   data.trials.graph.metrics(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.graph.metrics(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.graph.metrics(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.graph.metrics(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -310,45 +310,45 @@ data.sources.run.center <- function(mode = "arbitrary", order = 1)
 {
   #the cu's
   data.trials.center(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv", mode, order);
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv", mode, order);
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv", mode, order);
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv", mode, order);
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv", mode, order);
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv", mode, order);
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv", mode, order);
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv", mode, order);
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv", mode, order);
   #the f's
   data.trials.center(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv", mode, order);
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv", mode, order);
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv", mode, order);
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv", mode, order);
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv", mode, order);
   data.trials.center(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv", mode, order);
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv", mode, order);
   #unlink("tmp.txt");# this deletes the file
   data.trials.center(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -426,45 +426,45 @@ data.sources.run.merge.center <- function()
 {
   #the cu's
   data.trials.merge.center(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.merge.center(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.merge.center(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.merge.center(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -542,45 +542,45 @@ data.sources.run.partition <- function()
 {
   #the cu's
   data.trials.partition(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.partition(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.partition(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.partition(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.partition(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.partition(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.partition(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.partition(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.partition(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.partition(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.partition(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.partition(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.partition(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.partition(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -667,45 +667,45 @@ data.sources.run.markov <- function(k=100, prune=FALSE, sparse=FALSE, knnk=100)
 {
   #the cu's
   data.trials.markov(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv", k, prune, sparse, knnk);
   #the f's
   data.trials.markov(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv", k, prune, sparse, knnk);
   data.trials.markov(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv", k, prune, sparse, knnk);
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv", k, prune, sparse, knnk);
   #unlink("tmp.txt");# this deletes the file
   data.trials.markov(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -800,45 +800,45 @@ data.sources.run.affinity.propagation <- function(maxits=500, convits=10
 {
   #the cu's
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv", maxits, convits, pref, q, normalize, median.default.case);
   #the f's
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv", maxits, convits, pref, q, normalize, median.default.case);
   data.trials.affinity.propagation(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv", maxits, convits, pref, q, normalize, median.default.case);
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv", maxits, convits, pref, q, normalize, median.default.case);
   #unlink("tmp.txt");# this deletes the file
   ####### UNCOMMENTING THESE FOR AFFINITY PAPER #################
   #   data.trials.affinity.propagation(
@@ -934,45 +934,45 @@ data.sources.run.star.mean.overlap <- function()
 {
   #the cu's
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.mean.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.mean.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -1052,45 +1052,45 @@ data.sources.run.star.sum.overlap <- function()
 {
   #the cu's
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.sum.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.sum.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -1170,45 +1170,45 @@ data.sources.run.star.degree.overlap <- function()
 {
   #the cu's
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.degree.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.degree.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -1288,45 +1288,45 @@ data.sources.run.star.kleinberg.overlap <- function()
 {
   #the cu's
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.kleinberg.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.kleinberg.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -1406,45 +1406,45 @@ data.sources.run.star.evcent.overlap <- function()
 {
   #the cu's
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.evcent.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.evcent.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -1524,45 +1524,45 @@ data.sources.run.star.markov.overlap <- function()
 {
   #the cu's
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.markov.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.markov.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -1642,45 +1642,45 @@ data.sources.run.star.mean.non.overlap <- function()
 {
   #the cu's
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.mean.non.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.mean.non.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -1760,45 +1760,45 @@ data.sources.run.star.sum.non.overlap <- function()
 {
   #the cu's
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.sum.non.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.sum.non.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -1879,45 +1879,45 @@ data.sources.run.star.degree.non.overlap <- function()
 {
   #the cu's
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.degree.non.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.degree.non.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2000,45 +2000,45 @@ data.sources.run.cc.pivot <- function()
 {
   #the cu's
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.cc.pivot(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2120,45 +2120,45 @@ data.sources.run.star.kleinberg.non.overlap <- function()
 {
   #the cu's
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.kleinberg.non.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.kleinberg.non.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2239,45 +2239,45 @@ data.sources.run.star.evcent.non.overlap <- function()
 {
   #the cu's
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.evcent.non.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.evcent.non.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2358,45 +2358,45 @@ data.sources.run.star.markov.non.overlap <- function()
 {
   #the cu's
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.star.markov.non.overlap(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.star.markov.non.overlap(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2475,45 +2475,45 @@ data.sources.run.ricochet.SR.mean <- function()
 {
   #the cu's
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.SR.mean(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.SR.mean(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2593,45 +2593,45 @@ data.sources.run.ricochet.SR.sum <- function()
 {
   #the cu's
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.SR.sum(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.SR.sum(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2711,45 +2711,45 @@ data.sources.run.ricochet.SR.degree <- function()
 {
   #the cu's
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.SR.degree(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.SR.degree(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2829,45 +2829,45 @@ data.sources.run.ricochet.SR.kleinberg <- function()
 {
   #the cu's
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.SR.kleinberg(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.SR.kleinberg(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -2947,45 +2947,45 @@ data.sources.run.ricochet.SR.evcent <- function()
 {
   #the cu's
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.SR.evcent(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.SR.evcent(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -3065,45 +3065,45 @@ data.sources.run.ricochet.SR.markov <- function()
 {
   #the cu's
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.SR.markov(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.SR.markov(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -3183,45 +3183,45 @@ data.sources.run.ricochet.BSR.mean <- function()
 {
   #the cu's
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.BSR.mean(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.BSR.mean(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -3301,45 +3301,45 @@ data.sources.run.ricochet.BSR.sum <- function()
 {
   #the cu's
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.BSR.sum(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.BSR.sum(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -3419,45 +3419,45 @@ data.sources.run.ricochet.BSR.degree <- function()
 {
   #the cu's
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.BSR.degree(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.BSR.degree(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -3537,45 +3537,45 @@ data.sources.run.ricochet.BSR.kleinberg <- function()
 {
   #the cu's
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.BSR.kleinberg(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.BSR.kleinberg(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -3655,45 +3655,45 @@ data.sources.run.ricochet.BSR.evcent <- function()
 {
   #the cu's
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.BSR.evcent(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.BSR.evcent(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -3773,45 +3773,45 @@ data.sources.run.ricochet.BSR.markov <- function()
 {
   #the cu's
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.ricochet.BSR.markov(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet.BSR.markov(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -3896,45 +3896,45 @@ data.sources.run.min.cut <- function(method = "mean", overlap=FALSE, order = 1,
 {
   #the cu's
   data.trials.min.cut(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv", method, overlap, order, alpha, no.subsets);
   #the f's
   data.trials.min.cut(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv", method, overlap, order, alpha, no.subsets);
   data.trials.min.cut(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv", method, overlap, order, alpha, no.subsets);
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv", method, overlap, order, alpha, no.subsets);
   #unlink("tmp.txt");# this deletes the file
   data.trials.min.cut(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -4013,45 +4013,45 @@ data.sources.run.articulation.point <- function()
 {
   #the cu's
   data.trials.articulation.point(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.articulation.point(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.articulation.point(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.articulation.point(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -4134,45 +4134,45 @@ data.sources.run.cc.pivot <- function()
 {
   #the cu's
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv");
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv");
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv");
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv");
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv");
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv");
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv");
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv");
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv");
   #the f's
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv");
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv");
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv");
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv");
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv");
   data.trials.cc.pivot(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv");
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv");
   #unlink("tmp.txt");# this deletes the file
   data.trials.cc.pivot(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -4255,45 +4255,45 @@ data.sources.run.ricochet <- function(method='mean', algo='sr')
 {
   #the cu's
   data.trials.ricochet(
-    edge.path="./../data/scores_cu1_weightedjaccardbm25.csv",
-    node.path="./../data/cu1.csv", method, algo);
+    edge.path="./../data/scores_H1_weightedjaccardbm25.csv",
+    node.path="./../data/H1.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_cu2_weightedjaccardbm25.csv",
-    node.path="./../data/cu2.csv", method, algo);
+    edge.path="./../data/scores_H2_weightedjaccardbm25.csv",
+    node.path="./../data/H2.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_cu3_weightedjaccardbm25.csv",
-    node.path="./../data/cu3.csv", method, algo);
+    edge.path="./../data/scores_M1_weightedjaccardbm25.csv",
+    node.path="./../data/M1.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_cu4_weightedjaccardbm25.csv",
-    node.path="./../data/cu4.csv", method, algo);
+    edge.path="./../data/scores_M2_weightedjaccardbm25.csv",
+    node.path="./../data/M2.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_cu5_weightedjaccardbm25.csv",
-    node.path="./../data/cu5.csv", method, algo);
+    edge.path="./../data/scores_M3_weightedjaccardbm25.csv",
+    node.path="./../data/M3.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_cu6_weightedjaccardbm25.csv",
-    node.path="./../data/cu6.csv", method, algo);
+    edge.path="./../data/scores_M4_weightedjaccardbm25.csv",
+    node.path="./../data/M4.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv", method, algo);
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv", method, algo);
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv", method, algo);
   #the f's
   data.trials.ricochet(
-    edge.path="./../data/scores_f1_weightedjaccardbm25.csv",
-    node.path="./../data/f1.csv", method, algo);
+    edge.path="./../data/scores_AB_weightedjaccardbm25.csv",
+    node.path="./../data/AB.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_f2_weightedjaccardbm25.csv",
-    node.path="./../data/f2.csv", method, algo);
+    edge.path="./../data/scores_TS_weightedjaccardbm25.csv",
+    node.path="./../data/TS.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_f3_weightedjaccardbm25.csv",
-    node.path="./../data/f3.csv", method, algo);
+    edge.path="./../data/scores_EDL_weightedjaccardbm25.csv",
+    node.path="./../data/EDL.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_f4_weightedjaccardbm25.csv",
-    node.path="./../data/f4.csv", method, algo);
+    edge.path="./../data/scores_EDM_weightedjaccardbm25.csv",
+    node.path="./../data/EDM.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_f5_weightedjaccardbm25.csv",
-    node.path="./../data/f5.csv", method, algo);
+    edge.path="./../data/scores_EDH_weightedjaccardbm25.csv",
+    node.path="./../data/EDH.csv", method, algo);
   #unlink("tmp.txt");# this deletes the file
   data.trials.ricochet(
     edge.path="./../data/scores_5k_weightedjaccardbm25.csv",
@@ -4319,11 +4319,11 @@ data.sources.run.ricochet.leftovers <- function(method='mean', algo='sr')
 {
   #the cu's
   data.trials.ricochet(
-    edge.path="./../data/scores_cu7_weightedjaccardbm25.csv",
-    node.path="./../data/cu7.csv", method, algo);
+    edge.path="./../data/scores_L1_weightedjaccardbm25.csv",
+    node.path="./../data/L1.csv", method, algo);
   data.trials.ricochet(
-    edge.path="./../data/scores_cu8_weightedjaccardbm25.csv",
-    node.path="./../data/cu8.csv", method, algo);
+    edge.path="./../data/scores_L2_weightedjaccardbm25.csv",
+    node.path="./../data/L2.csv", method, algo);
 }
 #-------------------------------------------------------------------------------
 
@@ -4428,7 +4428,7 @@ data.runs.gp <- function(a.clust.algo=center.cluster,
                               data=current.fold,
                               gtest=gdata, clust.algo=a.clust.algo,
                               ground.truth.clusters=fold.truth.clusters,
-                              a.measure=gmd.F1.measure.fastest));}
+                              a.measure=gmd.AB.measure.fastest));}
     #NOTE: using which.max because not using rsme in fitnessFunction1
     a.gp.func <- a.gp.result$population[[which.max(sapply
       (a.gp.result$elite, fitnessFunction1))]];
@@ -4569,7 +4569,7 @@ data.run.gp.center.complex <- function(data, clust.algo=center.cluster,
 data.sources.run.gp.center.complex <- function()
 {
   #the cu's
-  for (i in 1:8) { #TODO: load files for cu2-8
+  for (i in 1:8) { #TODO: load files for H2-8
     node.path = paste("./../data/","cu", i,".csv", sep="")
     print(node.path);
     the.true.cluster = load.true.cluster(file.path=node.path);
@@ -4607,7 +4607,7 @@ data.run.gp.merge.center.simple <- function(data, clust.algo=merge.center.cluste
 data.sources.run.gp.merge.center.simple <- function()
 {
   #the cu's
-  for (i in 1:8) { #TODO: load files for cu2-8
+  for (i in 1:8) { #TODO: load files for H2-8
     node.path = paste("./../data/","cu", i,".csv", sep="")
     print(node.path);
     the.true.cluster = load.true.cluster(file.path=node.path);
@@ -4648,7 +4648,7 @@ data.run.gp.merge.center.complex <- function(data, clust.algo=merge.center.clust
 data.sources.run.gp.merge.center.complex <- function()
 {
   #the cu's
-  for (i in 1:8) { #TODO: load files for cu2-8
+  for (i in 1:8) { #TODO: load files for H2-8
     node.path = paste("./../data/","cu", i,".csv", sep="")
     print(node.path);
     the.true.cluster = load.true.cluster(file.path=node.path);
@@ -4686,7 +4686,7 @@ data.sources.run.gp.merge.center.complex <- function()
 data.sources.run.gp.merge.center.baseline <- function()
 {
   #the cu's
-  for (i in 1:8) { #TODO: load files for cu2-8
+  for (i in 1:8) { #TODO: load files for H2-8
     node.path = paste("./../data/","cu", i,".csv", sep="")
     print(node.path);
     the.true.cluster = load.true.cluster(file.path=node.path);
@@ -4704,7 +4704,7 @@ data.sources.run.gp.merge.center.baseline <- function()
 data.sources.run.gp.center.baseline <- function()
 {
   #the cu's
-  for (i in 1:8) { #TODO: load files for cu2-8
+  for (i in 1:8) { #TODO: load files for H2-8
     node.path = paste("./../data/","cu", i,".csv", sep="")
     print(node.path);
     the.true.cluster = load.true.cluster(file.path=node.path);

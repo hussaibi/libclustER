@@ -18,43 +18,43 @@ align.old.by.file <- function(old.output.error) {
   
   bool_check = old.output.error$table %in% c('h1', 'H1');
   tmp = character(length=sum(bool_check));
-  tmp[TRUE] = " ./../data/scores_cu1_weightedjaccardbm25.csv ";
+  tmp[TRUE] = " ./../data/scores_H1_weightedjaccardbm25.csv ";
   old.output.error[bool_check, ]$file = tmp ;
   
   bool_check = old.output.error$table %in% c('h2', 'H2');
   tmp = character(length=sum(bool_check));
-  tmp[TRUE] = " ./../data/scores_cu2_weightedjaccardbm25.csv ";
+  tmp[TRUE] = " ./../data/scores_H2_weightedjaccardbm25.csv ";
   old.output.error[bool_check, ]$file = tmp ;
   
   bool_check = old.output.error$table %in% c('m1', 'M1');
   tmp = character(length=sum(bool_check));
-  tmp[TRUE] = " ./../data/scores_cu3_weightedjaccardbm25.csv ";
+  tmp[TRUE] = " ./../data/scores_M1_weightedjaccardbm25.csv ";
   old.output.error[bool_check, ]$file = tmp ;
   
   bool_check = old.output.error$table %in% c('m2', 'M2');
   tmp = character(length=sum(bool_check));
-  tmp[TRUE] = " ./../data/scores_cu4_weightedjaccardbm25.csv ";
+  tmp[TRUE] = " ./../data/scores_M2_weightedjaccardbm25.csv ";
   old.output.error[bool_check, ]$file = tmp ;
   
   bool_check = old.output.error$table %in% c('m3', 'M3');
   tmp = character(length=sum(bool_check));
-  tmp[TRUE] = " ./../data/scores_cu5_weightedjaccardbm25.csv ";
+  tmp[TRUE] = " ./../data/scores_M3_weightedjaccardbm25.csv ";
   old.output.error[bool_check, ]$file = tmp ;
   
   bool_check = old.output.error$table %in% c('m4', 'M4');
   tmp = character(length=sum(bool_check));
-  tmp[TRUE] = " ./../data/scores_cu6_weightedjaccardbm25.csv ";
+  tmp[TRUE] = " ./../data/scores_M4_weightedjaccardbm25.csv ";
   old.output.error[bool_check, ]$file = tmp ;
   
   
   bool_check = old.output.error$table %in% c('l1', 'L1');
   tmp = character(length=sum(bool_check));
-  tmp[TRUE] = " ./../data/scores_cu7_weightedjaccardbm25.csv ";
+  tmp[TRUE] = " ./../data/scores_L1_weightedjaccardbm25.csv ";
   old.output.error[bool_check, ]$file = tmp ;
   
   bool_check = old.output.error$table %in% c('l2', 'L2');
   tmp = character(length=sum(bool_check));
-  tmp[TRUE] = " ./../data/scores_cu8_weightedjaccardbm25.csv ";
+  tmp[TRUE] = " ./../data/scores_L2_weightedjaccardbm25.csv ";
   old.output.error[bool_check, ]$file = tmp ;
   
   return(old.output.error)
@@ -140,34 +140,34 @@ output[["F1"]] <- 2*output[["Pr"]]*output[["Re"]] /
 
 #Different Data sets
 error.high = output[output[['file']] %in%
-  c(" ./../data/scores_cu1_weightedjaccardbm25.csv "
-    , " ./../data/scores_cu2_weightedjaccardbm25.csv "),];
+  c(" ./../data/scores_H1_weightedjaccardbm25.csv "
+    , " ./../data/scores_H2_weightedjaccardbm25.csv "),];
 by.err.high = list(as.numeric(error.high[["theta"]])
                    , as.character(error.high[["algo"]]));
 omean.err.high=aggregate(x = error.high, by =by.err.high, FUN = "mean");
 
 error.medium = output[output[['file']] %in%
-  c(" ./../data/scores_cu3_weightedjaccardbm25.csv "
-    , " ./../data/scores_cu4_weightedjaccardbm25.csv "
-    , " ./../data/scores_cu5_weightedjaccardbm25.csv "
-    , " ./../data/scores_cu6_weightedjaccardbm25.csv "),];
+  c(" ./../data/scores_M1_weightedjaccardbm25.csv "
+    , " ./../data/scores_M2_weightedjaccardbm25.csv "
+    , " ./../data/scores_M3_weightedjaccardbm25.csv "
+    , " ./../data/scores_M4_weightedjaccardbm25.csv "),];
 by.err.medium = list(as.numeric(error.medium[["theta"]])
                    , as.character(error.medium[["algo"]]));
 omean.err.medium=aggregate(x = error.medium, by =by.err.medium, FUN = "mean");
 
 error.low = output[output[['file']] %in%
-  c(" ./../data/scores_cu7_weightedjaccardbm25.csv "
-    , " ./../data/scores_cu8_weightedjaccardbm25.csv "),];
+  c(" ./../data/scores_L1_weightedjaccardbm25.csv "
+    , " ./../data/scores_L2_weightedjaccardbm25.csv "),];
 by.err.low = list(as.numeric(error.low[["theta"]])
                    , as.character(error.low[["algo"]]));
 omean.err.low=aggregate(x = error.low, by =by.err.low, FUN = "mean");
 
 error.none = output[output[['file']] %in%
-  c(" ./../data/scores_f1_weightedjaccardbm25.csv "
-    , " ./../data/scores_f2_weightedjaccardbm25.csv "
-    , " ./../data/scores_f3_weightedjaccardbm25.csv "
-    , " ./../data/scores_f4_weightedjaccardbm25.csv "
-    , " ./../data/scores_f5_weightedjaccardbm25.csv "),];
+  c(" ./../data/scores_AB_weightedjaccardbm25.csv "
+    , " ./../data/scores_TS_weightedjaccardbm25.csv "
+    , " ./../data/scores_EDL_weightedjaccardbm25.csv "
+    , " ./../data/scores_EDM_weightedjaccardbm25.csv "
+    , " ./../data/scores_EDH_weightedjaccardbm25.csv "),];
 by.err.none = list(as.numeric(error.none[["theta"]])
                   , as.character(error.none[["algo"]]));
 omean.err.none=aggregate(x = error.none, by=by.err.none, FUN = "mean");
@@ -796,33 +796,33 @@ plot.data.means <- function(omean, x.lab, y.lab, hc=rainbow(n=length(datas)
 # 
 # #Different Data sets
 # error.high = gp.theta.output[gp.theta.output[['file']] %in%
-#   c(" ./../data/cu1.csv ", " ./../data/cu2.csv "),];
+#   c(" ./../data/H1.csv ", " ./../data/H2.csv "),];
 # by.err.high = list(as.numeric(error.high[["theta"]])
 #                    , as.character(error.high[["algo"]]));
 # omean.err.high=aggregate(x = error.high, by =by.err.high, FUN = "mean");
 # 
 # error.medium = gp.theta.output[gp.theta.output[['file']] %in%
-#   c(" ./../data/cu3.csv "
-#     , " ./../data/cu4.csv "
-#     , " ./../data/cu5.csv "
-#     , " ./../data/cu6.csv "),];
+#   c(" ./../data/M1.csv "
+#     , " ./../data/M2.csv "
+#     , " ./../data/M3.csv "
+#     , " ./../data/M4.csv "),];
 # by.err.medium = list(as.numeric(error.medium[["theta"]])
 #                      , as.character(error.medium[["algo"]]));
 # omean.err.medium=aggregate(x = error.medium, by =by.err.medium, FUN = "mean");
 # 
 # error.low = gp.theta.output[gp.theta.output[['file']] %in%
-#   c(" ./../data/cu7.csv "
-#     , " ./../data/cu8.csv "),];
+#   c(" ./../data/L1.csv "
+#     , " ./../data/L2.csv "),];
 # by.err.low = list(as.numeric(error.low[["theta"]])
 #                   , as.character(error.low[["algo"]]));
 # omean.err.low=aggregate(x = error.low, by =by.err.low, FUN = "mean");
 # 
 # error.none = gp.theta.output[gp.theta.output[['file']] %in%
-#   c(" ./../f1.csv "
-#     , " ./../data/f2.csv "
-#     , " ./../data/f3.csv "
-#     , " ./../data/f4.csv "
-#     , " ./../data/f5.csv "),];
+#   c(" ./../AB.csv "
+#     , " ./../data/TS.csv "
+#     , " ./../data/EDL.csv "
+#     , " ./../data/EDM.csv "
+#     , " ./../data/EDH.csv "),];
 # by.err.none = list(as.numeric(error.none[["theta"]])
 #                    , as.character(error.none[["algo"]]));
 # omean.err.none=aggregate(x = error.none, by=by.err.none, FUN = "mean");

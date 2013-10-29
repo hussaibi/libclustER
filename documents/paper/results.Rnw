@@ -578,14 +578,14 @@ Note that the accuracy numbers in this table cannot be used to directly compare 
 accuracy.calc <- function(x, theta.range=1:9/10, algo=" partition ", acc="VI",
                           the.max=TRUE) 
 {
-  high.err = c(" ./../data/scores_cu1_weightedjaccardbm25.csv ",
-              " ./../data/scores_cu2_weightedjaccardbm25.csv ")
-  med.err = c(" ./../data/scores_cu3_weightedjaccardbm25.csv ",
-              " ./../data/scores_cu4_weightedjaccardbm25.csv ",
-              " ./../data/scores_cu5_weightedjaccardbm25.csv ",
-              " ./../data/scores_cu6_weightedjaccardbm25.csv ")
-  low.err = c(" ./../data/scores_cu7_weightedjaccardbm25.csv ",
-              " ./../data/scores_cu8_weightedjaccardbm25.csv ")
+  high.err = c(" ./../data/scores_H1_weightedjaccardbm25.csv ",
+              " ./../data/scores_H2_weightedjaccardbm25.csv ")
+  med.err = c(" ./../data/scores_M1_weightedjaccardbm25.csv ",
+              " ./../data/scores_M2_weightedjaccardbm25.csv ",
+              " ./../data/scores_M3_weightedjaccardbm25.csv ",
+              " ./../data/scores_M4_weightedjaccardbm25.csv ")
+  low.err = c(" ./../data/scores_L1_weightedjaccardbm25.csv ",
+              " ./../data/scores_L2_weightedjaccardbm25.csv ")
   
   x <- x[ as.character(x$algo) %in% algo, ]; # select algo
   x <- x[ as.numeric(x$theta) %in% theta.range, ];# select thetas
@@ -809,124 +809,7 @@ Cluster\# & Medium & 354 & 472 & 459 & 521 & 504 & 386 & 527 & 454 & 528 & 665 &
 \end{table*}
 %\textbf{Effect of the type of errors}
 %Oktie: Maybe add later...
-\subsubsection{Sensitivity to Error Distribution} Table \ref{tbl:all-acc-dist} shows the best accuracy values obtained for the algorithms on Medium Error Group datasets with uniform and Zipfian distributions. Note that in the Zipfian dataset, there are many records with no duplicates (singleton clusters) and only a few records with many duplicates. PCPr is less indicative of the performance of the algorithms on this class of datasets. Our results show all  algorithms are equally robust with respect to the distribution of errors, except for BSR and OCR which produce clusters of significantly lower quality.
-%Bilal: added reasoning
-For the sequential algorithms, this is primarily due to the initial step of placing all vertices in one clustering. Even with the KL-heuristic, there is no mechanism in place for the representative of the initial clustering to disassociate with singletons present in the graph. As such, singletons should be clustered and removed prior to applying the algorithm, and merged with the produced cluster. (We do this for our implementation of these algorithms.)
-%Oktie(CR): Removed PCPr to avoid confusion
-<<echo=FALSE >>=
-accuracy.calc2 <- function(x, theta.range=1:9/10, algo=" partition ", acc="VI",
-                          the.max=TRUE) 
-{
-  med.err = c(#" ./../data/scores_cu3_weightedjaccardbm25.csv "
-              #, " ./../data/scores_cu4_weightedjaccardbm25.csv "
-               " ./../data/scores_cu5_weightedjaccardbm25.csv "
-              , " ./../data/scores_cu6_weightedjaccardbm25.csv "
-              ) # Told by Oktie that only two had been used
-  #Only data set that could be producing ~1000 clusters made available
-  zipf.med.err = c(" ./../data/scores_10k_weightedjaccardbm25.csv ")
-  
-  x <- x[ as.character(x$algo) %in% algo, ]; # select algo
-  x <- x[ as.numeric(x$theta) %in% theta.range, ];# select thetas
-  x2 <- x[ as.character(x$file) %in% zipf.med.err, ];# select data sources
-  x1 <- x[ as.character(x$file) %in% med.err, ];# select data sources
-  by1 = list(x1[["theta"]]);
-  x1 <- aggregate(x = x1, by = by1, FUN = "mean");
-  if (the.max){
-    ma1 <- max(x1[[acc]]);
-    ma2 <- max(x2[[acc]]);
-    ma3 <- abs(ma1-ma2)
-  } else {
-    ma1 <- min(x1[[acc]]);
-    ma2 <- min(x2[[acc]]);
-    ma3 <- abs(ma1- ma2)
-  }
-  return(c(format(ma1,digits=3, scientific=FALSE),
-           format(ma2,digits=3, scientific=FALSE),
-           format(ma3,digits=2, scientific=FALSE)));    
-}
-
-cluster.calc2 <- function(x, theta.range=1:9/10, algo=" partition ") 
-{
-  acc="ClusterNum"
-  med.err = c(#" ./../data/scores_cu3_weightedjaccardbm25.csv "
-              #, " ./../data/scores_cu4_weightedjaccardbm25.csv "
-               " ./../data/scores_cu5_weightedjaccardbm25.csv "
-              , " ./../data/scores_cu6_weightedjaccardbm25.csv "
-              ) # Told by Oktie that only two had been used
-  #Only data set that could be producing ~1000 clusters made available
-  zipf.med.err = c(" ./../data/scores_10k_weightedjaccardbm25.csv ")
-  
-  x <- x[ as.character(x$algo) %in% algo, ]; # select algo
-  x <- x[ as.numeric(x$theta) %in% theta.range, ];# select thetas
-  x2 <- x[ as.character(x$file) %in% zipf.med.err, ];# select data sources
-  x1 <- x[ as.character(x$file) %in% med.err, ];# select data sources
-  by1 = list(x1[["theta"]]);
-  x1 <- aggregate(x = x1, by = by1, FUN = "mean");
-  ma1 <- x1[[acc]][which.min(abs(500-x1[[acc]]))];
-  ma2 <- x2[[acc]][which.min(abs(1000-x2[[acc]]))];
-  ma3 <- min(ma1, ma2) - max(ma1, ma2);
-  return(c(format(ma1,digits=4, scientific=FALSE),
-           format(ma2,digits=4, scientific=FALSE),
-           format(ma3,digits=4, scientific=FALSE)));    
-}
-@
-\begin{table*}[ht]
-\caption{Best accuracy values for algorithms over Medium Error Group datasets with different distributions}
-\label{tbl:all-acc-dist}
-\scriptsize
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
-Measure & Group & Part. & CENTER & MC & Star & SR & BSR & CR & OCR & MCL & CUT & ArtPt.& CC-PIV & AP\\ \hline
-F1 & Uniform & 0.910 & 0.887 & 0.918 & 0.892 & 0.920 & 0.873 & 0.910 & 0.872 & 0.921 & 0.721 & 0.907 &
-<<results=tex, echo=FALSE>>=
-cat(accuracy.calc(x=output, algo=" cc-pivot ", acc="F1")[1])
-@
-&
-<<results=tex, echo=FALSE>>=
-cat(accuracy.calc(x=output, algo=" affinity-propagation-uniform(=0) ", acc="F1")[1])
-@
-\\
- & Zipfian & 0.936 & 0.936 & 0.938 & 0.934 & 0.873 & 0.463 & 0.935 & 0.697 &  0.937 & 0.819 & 0.934 &
-<<results=tex, echo=FALSE>>=
-cat(accuracy.calc(x=output, algo=" cc-pivot ", acc="F1")[2])
-@
- &
-<<results=tex, echo=FALSE>>=
-cat(accuracy.calc(x=output, algo=" affinity-propagation-uniform(=0) ", acc="F1")[2])
-@
- \\  \cline{2-15}
- & Diff. & +0.026 & +0.049 & +0.020 & +0.041 & -0.047 & -0.411 & +0.025 & -0.175 & +0.016 & +0.098 & +0.027 &
-<<results=tex, echo=FALSE>>=
-cat(accuracy.calc(x=output, algo=" cc-pivot ", acc="F1")[3])
-@
- &
-<<results=tex, echo=FALSE>>=
-cat(accuracy.calc(x=output, algo=" affinity-propagation-uniform(=0) ", acc="F1")[3])
-@
- \\ \hline
-Cluster\# & Uniform & 354 & 472 & 459 & 521 & 504 & 386 & 527 & 454 & 528 & 665 & 428 &
-<<results=tex, echo=FALSE>>=
-cat(cluster.calc2(x=output, algo=" cc-pivot ")[1])
-@
-&
-<<results=tex, echo=FALSE>>=
-cat(cluster.calc2(x=output, algo=" affinity-propagation-uniform(=0) ")[1])
-@
-\\
- & Zipfian & 1018 & 934 & 1047.5 & 933 & 698.5 & 158 & 1061 & 992 & 1021 & 1038 & 1067 &
-<<results=tex, echo=FALSE>>=
-cat(cluster.calc2(x=output, algo=" cc-pivot ")[2])
-@
- &
-<<results=tex, echo=FALSE>>=
-cat(cluster.calc2(x=output, algo=" affinity-propagation-uniform(=0) ")[2])
-@
- \\ \hline
-\end{tabular}
-\end{center}
-%\vspace{-10pt}
-\end{table*}
-\subsubsection{Clusters Size Effectiveness} The results of our experiments, partly shown in Tables \eat{\ref{tbl:all-acc-thr},}\ref{tbl:all-acc-amount} and \ref{tbl:all-acc-dist}, show that none of the algorithms are capable of accurately predicting the number of clusters regardless of the characteristics of the dataset. For uniform datasets, SR algorithms perform extremely well for finding the correct number of clusters on datasets with different amounts of errors. However, this algorithm fails when it comes to datasets with a Zipfian distribution of errors. Overall, algorithms that find star-shaped clusters, namely CENTER, MC, STAR, CR 
+\subsubsection{Clusters Size Effectiveness} The results of our experiments, partly shown in Tables \eat{\ref{tbl:all-acc-thr},}\ref{tbl:all-acc-amount} and \ref{tbl:all-acc-dist}, show that none of the algorithms are capable of accurately predicting the number of clusters regardless of the characteristics of the dataset. For uniform datasets, SR algorithms perform extremely well for finding the correct number of clusters on datasets with different amounts of errors. Overall, algorithms that find star-shaped clusters, namely CENTER, MC, STAR, CR 
 %Bilal: Changed dataset to clusterings
 and OCR algorithms, can effectively find the right number of clusters with an optimal threshold.  CC-PIV and MCL also find a reasonable number of clusters at lower thresholds.
 
