@@ -826,10 +826,10 @@ GHz Intel Core2 Extreme Quad-Core Processor QX6700, 4GB of RAM running 32-bit Wi
 <<echo=FALSE >>=
 runtime.calc <- function(x, theta.range=6:9/10, algo=" partition ",
                          data.source=c
-                         (" ./../data/scores_cu3_weightedjaccardbm25.csv ",
-                          " ./../data/scores_cu4_weightedjaccardbm25.csv ",
-                          " ./../data/scores_cu5_weightedjaccardbm25.csv ",
-                          " ./../data/scores_cu6_weightedjaccardbm25.csv ")) 
+                         (" ./../data/scores_M1_weightedjaccardbm25.csv ",
+                          " ./../data/scores_M2_weightedjaccardbm25.csv ",
+                          " ./../data/scores_M3_weightedjaccardbm25.csv ",
+                          " ./../data/scores_M4_weightedjaccardbm25.csv ")) 
 {
   x <- x[ as.character(x$algo) %in% algo, ]; # select algo
   x <- x[ as.numeric(x$theta) %in% theta.range, ];# select thetas
